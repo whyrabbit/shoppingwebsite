@@ -91,8 +91,6 @@
   position: relative;
   top:50%;
   transform:translateY(-50%);
-
-  
 }
 .sina-nav .sina-brand p {
   color: #222;
@@ -771,9 +769,7 @@
   .sina-nav.mobile-sidebar .sina-menu {
     padding: 15px;
     margin: 0;
-    position: relative;
-    top:50%;
-    transform:translateY(-50%);
+   
   }
   .sina-nav.mobile-sidebar.navbar-reverse .navbar-collapse {
     right: -300px;
