@@ -55,5 +55,5 @@ server.get("/login", urlencodedParser, function (req, res) {
 }); //登入
 
 
-server.use(express.static("public"));
+server.use(express.static("publish"));
 server.listen(3000);
