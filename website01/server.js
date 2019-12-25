@@ -21,9 +21,10 @@ var Users = new DB({
 
 server.post("/regist", urlencodedParser, function (req, res) { //註冊
     var user = {
+        UserName: req.body.UserName,
         Email: req.body.UserEmail,
         password: req.body.password
-    }; // 那你這邊應該不是find是create 才對你之後記得改
+    }; 
     Users.findOne({
         "Email": req.body.UserEmail
     }, function (err, docs) { //查詢有沒有該值
