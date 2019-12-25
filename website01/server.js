@@ -43,7 +43,7 @@ server.post("/regist", urlencodedParser, function (req, res) { //註冊
 server.get("/login", urlencodedParser, function (req, res) {
     Users.findOne({
         // get 用的是 query
-        "Email": req.query.UserEmail,
+        "UserName": req.query.UserName,
         "password": req.query.password
     }, function (err, docs) { //查詢有沒有該值
         if (docs == null) { //如果沒有
