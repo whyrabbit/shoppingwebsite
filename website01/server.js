@@ -41,17 +41,27 @@ server.post("/regist", urlencodedParser, function (req, res) { //註冊
 
 });
 server.get("/login", urlencodedParser, function (req, res) {
+    var message = {
+
+        check: ""
+
+    }
     Users.findOne({
         // get 用的是 query
         "UserName": req.query.UserName,
         "password": req.query.password
     }, function (err, docs) { //查詢有沒有該值
         if (docs == null) { //如果沒有
-            res.send("請先註冊");
+            message.check="錯誤帳號密碼" ; 
+            res.send(message); 
+            return;
+            console.log("沒值");
         } else {
-            res.send("已登入"); //有該值則已註冊
+            message.check="歡迎使用" ; 
+            res.send(message); 
+            console.log("有值");
+            return;
         }
-        
     });
 }); //登入
 
