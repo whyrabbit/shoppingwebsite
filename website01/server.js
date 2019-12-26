@@ -17,7 +17,10 @@ var Users = new DB({
     filename: 'Users.db',
     autoload: true
 }); //autoload:自動將資料庫載入記憶體
-
+var About=new DB({
+    filename: 'About.db',
+    autoload: true
+})
 
 server.post("/regist", urlencodedParser, function (req, res) { //註冊
     var user = {
@@ -52,6 +55,7 @@ server.get("/login", urlencodedParser, function (req, res) {
         "password": req.query.password
     }, function (err, docs) { //查詢有沒有該值
         if (docs == null) { //如果沒有
+            console.log( req.query.UserName);
             message.check="錯誤帳號密碼" ; 
             res.send(message); 
             return;
@@ -64,7 +68,17 @@ server.get("/login", urlencodedParser, function (req, res) {
         }
     });
 }); //登入
-
+server.post("/regist", urlencodedParser, function (req, res) { //About
+    var userMessage = {
+        UserName: req.body.UserName,
+        Email: req.body.UserEmail,
+        Telephone:req.body.Telephone,
+        password: req.body.password,
+        message:req.body.message
+    }; 
+   About.insert(userMessage, function (err, newuserMessage) {})
+    
+});
 
 server.use(express.static("publish"));
 server.listen(3000);

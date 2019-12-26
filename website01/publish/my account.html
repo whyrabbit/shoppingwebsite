@@ -124,7 +124,7 @@
 
 								<div class="form-group row">
 									<div class="col-sm-6">
-										<button type="submit" class="btn btn-primary">送出</button>
+										<button type="submit" class="btn btn-primary" id="regist">送出</button>
 									</div>
 								</div>
 
@@ -183,8 +183,9 @@
 
 	</div>
 	<!--帳號密碼-->
-	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js">
-
+	
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
 		$(function () {
 			$("#login").click(function () {
 				if ($("#inputEmail3").val().length == 0 || $("#inputPassword3").val().length == 0) {
@@ -200,6 +201,16 @@
 						}
 					})
 					return false;
+				};
+				
+			})
+		})
+		$(function () {
+			$("#regist").click(function () {
+				if ($("#inputEmail3").val().length == 0 || $("#inputPassword3").val().length == 0) {
+					return alert("請輸入內容!");
+				} else {
+					return alert("註冊成功!");
 				};
 				
 			})
