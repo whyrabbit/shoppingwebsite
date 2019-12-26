@@ -43,12 +43,14 @@ server.post("/regist", urlencodedParser, function (req, res) { //註冊
     });
 
 });
+
 server.get("/login", urlencodedParser, function (req, res) {
     var message = {
 
         check: ""
 
     }
+   
     Users.findOne({
         // get 用的是 query
         "UserName": req.query.UserName,
@@ -79,6 +81,7 @@ server.post("/regist", urlencodedParser, function (req, res) { //About
    About.insert(userMessage, function (err, newuserMessage) {})
     
 });
+
 
 server.use(express.static("publish"));
 server.listen(3000);

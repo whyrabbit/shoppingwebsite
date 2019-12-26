@@ -93,15 +93,15 @@
 							<form action="/regist" method="POST">
 								<div class="form-group row ">
 									<label for="inputEmail3" class="col-sm-2 col-form-label">用戶名：</label>
-									<div class="col-sm-4">
-										<input type="text" class="form-control" id="inputEmail3" placeholder="用戶名"
+									<div class="col-sm-4"> 
+										<input type="text" class="form-control" id="signupName" placeholder="用戶名"
 											name="UserName">
 									</div>
 								</div>
 								<div class="form-group row">
 									<label for="inputEmail3" class="col-sm-2 col-form-label">Email：</label>
 									<div class="col-sm-4">
-										<input type="email" class="form-control" id="inputEmail3" placeholder="Email"
+										<input type="email" class="form-control" id="signupEmail" placeholder="Email"
 											name="UserEmail">
 									</div>
 								</div>
@@ -109,14 +109,14 @@
 								<div class="form-group row">
 									<label for="inputPassword3" class="col-sm-2 col-form-label">密碼：</label>
 									<div class="col-sm-4">
-										<input type="password" class="form-control" id="inputPassword3" placeholder="密碼"
+										<input type="password" class="form-control" id="signupPassword" placeholder="密碼"
 											name="password">
 									</div>
 								</div>
 								<div class="form-group row">
 									<label for="inputPassword3" class="col-sm-2 col-form-label">確認密碼：</label>
 									<div class="col-sm-4">
-										<input type="password" class="form-control" id="inputPassword3"
+										<input type="password" class="form-control" id="signupPassword2"
 											placeholder="請再輸入一次密碼！" name="rpassword">
 									</div>
 								</div>
@@ -144,7 +144,7 @@
 								<div class="form-group row">
 									<label for="inputEmail3" class="col-sm-2 col-form-label">用戶名：</label>
 									<div class="col-sm-4">
-										<input type="text" class="form-control" id="inputEmail3" placeholder="用戶名"
+										<input type="text" class="form-control" id="loginName" placeholder="用戶名"
 											name="UserName">
 									</div>
 								</div>
@@ -152,7 +152,7 @@
 								<div class="form-group row">
 									<label for="inputPassword3" class="col-sm-2 col-form-label">密碼：</label>
 									<div class="col-sm-4">
-										<input type="password" class="form-control" id="inputPassword3" placeholder="密碼"
+										<input type="password" class="form-control" id="loginPassword" placeholder="密碼"
 											name="password">
 									</div>
 								</div>
@@ -187,13 +187,24 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
 		$(function () {
+
+			// 像這樣 ，因為這個每次抓都會消耗效能跟時間，而你 html 標籤常常改，擬定義好之後只要改一次比較方便
+			// 然後變數前面會加 '$' 代表是 jQuery 物件
+			const $loginName = $("#loginName");
+			const $loginPassword = $("#loginPassword");
+
 			$("#login").click(function () {
-				if ($("#inputEmail3").val().length == 0 || $("#inputPassword3").val().length == 0) {
+				if ($loginName.val().length == 0 || $loginPassword.val().length == 0) {
 					return alert("請輸入內容!");
 				} else {
 
 					$.ajax({
 						url: '/login',
+						data: {
+							UserName: $loginName.val(),
+							password: $loginPassword.val()
+							
+						},
 						dataType: 'json',
 						type: 'get',
 						success: function (data) {
@@ -207,7 +218,11 @@
 		})
 		$(function () {
 			$("#regist").click(function () {
-				if ($("#inputEmail3").val().length == 0 || $("#inputPassword3").val().length == 0) {
+				const $signupName = $("#signupName");
+				const $signupEmail = $("#signupEmail");
+				const $signupPassword = $("#signupPassword");
+				const $signupPassword2 = $("#signupPassword2");
+				if ($signupName.val().length == 0 || $signupEmail.val().length == 0 || $signupPassword.val().length == 0 || $signupPassword2.val().length == 0) {
 					return alert("請輸入內容!");
 				} else {
 					return alert("註冊成功!");
