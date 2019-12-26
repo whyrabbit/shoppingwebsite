@@ -49,7 +49,7 @@
 				<ul class="sina-menu" data-in="fadeInLeft" data-out="fadeInOut">
 					<li class="scroll"><a href="index.html">HOME</a></li>
 					<li class="active scroll"><a href="about.html">ABOUT</a></li>
-					<li class="active scroll"><a href="#about">NEWS</a></li>
+					<li class="active scroll"><a href="index.html">NEWS</a></li>
 					<li class="scroll"><a href="product.html">PRODUCTS</a></li>
 					<li class="scroll"><a href="my account.html">MY ACCOUNT</a></li>
 				</ul>
@@ -67,9 +67,9 @@
 
 						<div class="carousel-inner">
 							<div class="carousel-item item active ">
-								<img class="d-block w-100 " src="images/assets/banner.jpg" alt="banner">
-								<div class="carousel-caption">
-									<h3>標題</h3>
+								<img class="d-block w-100 " src="images/assets/banner.jpg" alt="banner" data-aos="fade-right" data-aos-delay="100">
+								<div class=" about_banner_title" data-aos="fade-down" data-aos-delay="400">
+									<h3>關於</h3>
 								</div>
 							</div>
 
@@ -139,7 +139,7 @@
 
 							<div class="form-group row">
 								<div class="col-sm-12">
-									<button type="submit" class="btn btn-primary">送出</button>
+									<button type="submit" class="btn btn-primary"style="width:150px;height:150px;background-image:url('images/assets/submit_button.png');"></button>
 								</div>
 							</div>
 						</form>
@@ -151,6 +151,9 @@
 
 
 			</div>
+			<!-- go to page-top -->
+	<button onclick="topFunction()" id="go-top_button" title="Go to top" style="width:80px;height:91px;background-image:url('images/assets/go-top_button.png');"></button>
+
 		</div>
 
 	</div>
@@ -168,6 +171,7 @@
 			</div>
 		</footer>
 	</div>
+	
 	<script>
 		$('#source').quicksand($('#destination li'), {
 			name: value
@@ -186,7 +190,34 @@
 			}
 		});
 	</script>
+<!--go to top js-->
+<script>
+mybutton = document.getElementById("go-top_button");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
 
+function topFunction() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0; 
+}
+</script>	
+
+	<!--AOS ani-->
+	<script>
+		AOS.init({
+
+			easing: 'ease-in',
+
+
+
+		});
+	</script>
 	<!--AOS ani-->
 	<script>
 		AOS.init({
