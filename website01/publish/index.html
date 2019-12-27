@@ -84,8 +84,8 @@
 </head>
 
 <body>
-
-
+	<!--page-loading-->
+	<div id='loading'><h3>正在載入頁面資料...</h3></div>
 	<!--nav-->
 	<nav class="sina-nav mobile-sidebar navbar-fixed py-4" data-top="0">
 		<div class="container">
@@ -312,7 +312,12 @@
 			</div>
 		</footer>
 	</div>
-
+<!--page-loading js -->
+<script>
+	$(window).load(function(){
+			$('#loading').hide(0);
+			});
+	</script>
 <!--go to top js-->
 <script>
 mybutton = document.getElementById("go-top_button");

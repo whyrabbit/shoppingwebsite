@@ -20,7 +20,8 @@
 </head>
 
 <body>
-
+<!--page-loading-->
+<div id='loading'><h3>正在載入頁面資料...</h3></div>
 
 	<!--nav-->
 	<nav class="sina-nav mobile-sidebar navbar-fixed py-4" data-top="0">
@@ -67,7 +68,8 @@
 
 						<div class="carousel-inner">
 							<div class="carousel-item item active ">
-								<img class="d-block w-100 " src="images/assets/banner.jpg" alt="banner" data-aos="fade-right" data-aos-delay="100">
+								<img class="d-block w-100 " src="images/assets/banner.jpg" alt="banner"
+									data-aos="fade-right" data-aos-delay="100">
 								<div class=" about_banner_title" data-aos="fade-down" data-aos-delay="400">
 									<h3>關於</h3>
 								</div>
@@ -105,25 +107,29 @@
 							<div class="form-group row">
 								<label for="inputEmail3" class="col-sm-2 col-form-label">用戶名：</label>
 								<div class="col-sm-10">
-									<input type="text" class="form-control" id="inputEmail3" placeholder="用戶名" name="UserName">
+									<input type="text" class="form-control" id="inputEmail3" placeholder="用戶名"
+										name="UserName">
 								</div>
 							</div>
 							<div class="form-group row">
 								<label for="inputEmail3" class="col-sm-2 col-form-label">Email：</label>
 								<div class="col-sm-10">
-									<input type="email" class="form-control" id="inputEmail3" placeholder="Email" name="UserEmail">
+									<input type="email" class="form-control" id="inputEmail3" placeholder="Email"
+										name="UserEmail">
 								</div>
 							</div>
 							<div class="form-group row">
 								<label for="inputEmail3" class="col-sm-2 col-form-label">電話：</label>
 								<div class="col-sm-10">
-									<input type="text" class="form-control" id="inputEmail3" placeholder="電話" name="Telephone">
+									<input type="text" class="form-control" id="inputEmail3" placeholder="電話"
+										name="Telephone">
 								</div>
 							</div>
 							<div class="form-group row">
 								<label for="inputPassword3" class="col-sm-2 col-form-label">密碼：</label>
 								<div class="col-sm-10">
-									<input type="password" class="form-control" id="inputPassword3" placeholder="密碼" name="password">
+									<input type="password" class="form-control" id="inputPassword3" placeholder="密碼"
+										name="password">
 								</div>
 							</div>
 							<div class="form-group row">
@@ -131,15 +137,16 @@
 
 								<label for="comment" class="col-sm-2 col-form-label">訊息:</label>
 								<div class="col-sm-10">
-									<textarea class="form-control" rows="5" id="comment"
-										placeholder="請輸入訊息！" name="message"></textarea>
+									<textarea class="form-control" rows="5" id="comment" placeholder="請輸入訊息！"
+										name="message"></textarea>
 								</div>
 							</div>
 
 
 							<div class="form-group row">
 								<div class="col-sm-12">
-									<button type="submit" class="btn btn-primary"style="width:150px;height:150px;background-image:url('images/assets/submit_button.png');"></button>
+									<button type="submit" class="btn btn-primary"
+										style="width:150px;height:150px;background-image:url('images/assets/submit_button.png');"></button>
 								</div>
 							</div>
 						</form>
@@ -152,7 +159,8 @@
 
 			</div>
 			<!-- go to page-top -->
-	<button onclick="topFunction()" id="go-top_button" title="Go to top" style="width:80px;height:91px;background-image:url('images/assets/go-top_button.png');"></button>
+			<button onclick="topFunction()" id="go-top_button" title="Go to top"
+				style="width:80px;height:91px;background-image:url('images/assets/go-top_button.png');"></button>
 
 		</div>
 
@@ -171,7 +179,7 @@
 			</div>
 		</footer>
 	</div>
-	
+
 	<script>
 		$('#source').quicksand($('#destination li'), {
 			name: value
@@ -190,23 +198,32 @@
 			}
 		});
 	</script>
-<!--go to top js-->
-<script>
-mybutton = document.getElementById("go-top_button");
-window.onscroll = function() {scrollFunction()};
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
+	<!--page-loading js -->
+	<script>
+		$(window).load(function(){
+				$('#loading').hide(0);
+				});
+		</script>
+	<!--go to top js-->
+	<script>
+		mybutton = document.getElementById("go-top_button");
+		window.onscroll = function () {
+			scrollFunction()
+		};
 
-function topFunction() {
-  document.body.scrollTop = 0; 
-  document.documentElement.scrollTop = 0; 
-}
-</script>	
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+		}
+
+		function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+	</script>
 
 	<!--AOS ani-->
 	<script>
