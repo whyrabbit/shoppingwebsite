@@ -2647,7 +2647,7 @@ fieldset:disabled a.btn {
 
 .btn-primary {
     color: #9E7A7A;
-    background-color: #8E354A;
+    background-color:transparent;
     
 }
 

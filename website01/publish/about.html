@@ -20,7 +20,8 @@
 </head>
 
 <body>
-
+<!--page-loading-->
+<div id='loading'><h3>正在載入頁面資料...</h3></div>
 
 	<!--nav-->
 	<nav class="sina-nav mobile-sidebar navbar-fixed py-4" data-top="0">
@@ -49,7 +50,7 @@
 				<ul class="sina-menu" data-in="fadeInLeft" data-out="fadeInOut">
 					<li class="scroll"><a href="index.html">HOME</a></li>
 					<li class="active scroll"><a href="about.html">ABOUT</a></li>
-					<li class="active scroll"><a href="#about">NEWS</a></li>
+					<li class="active scroll"><a href="index.html">NEWS</a></li>
 					<li class="scroll"><a href="product.html">PRODUCTS</a></li>
 					<li class="scroll"><a href="my account.html">MY ACCOUNT</a></li>
 				</ul>
@@ -67,9 +68,10 @@
 
 						<div class="carousel-inner">
 							<div class="carousel-item item active ">
-								<img class="d-block w-100 " src="images/assets/banner.jpg" alt="banner">
-								<div class="carousel-caption">
-									<h3>標題</h3>
+								<img class="d-block w-100 " src="images/assets/banner.jpg" alt="banner"
+									data-aos="fade-right" data-aos-delay="100">
+								<div class=" about_banner_title" data-aos="fade-down" data-aos-delay="400">
+									<h3>關於</h3>
 								</div>
 							</div>
 
@@ -105,25 +107,29 @@
 							<div class="form-group row">
 								<label for="inputEmail3" class="col-sm-2 col-form-label">用戶名：</label>
 								<div class="col-sm-10">
-									<input type="text" class="form-control" id="inputEmail3" placeholder="用戶名" name="UserName">
+									<input type="text" class="form-control" id="inputEmail3" placeholder="用戶名"
+										name="UserName">
 								</div>
 							</div>
 							<div class="form-group row">
 								<label for="inputEmail3" class="col-sm-2 col-form-label">Email：</label>
 								<div class="col-sm-10">
-									<input type="email" class="form-control" id="inputEmail3" placeholder="Email" name="UserEmail">
+									<input type="email" class="form-control" id="inputEmail3" placeholder="Email"
+										name="UserEmail">
 								</div>
 							</div>
 							<div class="form-group row">
 								<label for="inputEmail3" class="col-sm-2 col-form-label">電話：</label>
 								<div class="col-sm-10">
-									<input type="text" class="form-control" id="inputEmail3" placeholder="電話" name="Telephone">
+									<input type="text" class="form-control" id="inputEmail3" placeholder="電話"
+										name="Telephone">
 								</div>
 							</div>
 							<div class="form-group row">
 								<label for="inputPassword3" class="col-sm-2 col-form-label">密碼：</label>
 								<div class="col-sm-10">
-									<input type="password" class="form-control" id="inputPassword3" placeholder="密碼" name="password">
+									<input type="password" class="form-control" id="inputPassword3" placeholder="密碼"
+										name="password">
 								</div>
 							</div>
 							<div class="form-group row">
@@ -131,15 +137,16 @@
 
 								<label for="comment" class="col-sm-2 col-form-label">訊息:</label>
 								<div class="col-sm-10">
-									<textarea class="form-control" rows="5" id="comment"
-										placeholder="請輸入訊息！" name="message"></textarea>
+									<textarea class="form-control" rows="5" id="comment" placeholder="請輸入訊息！"
+										name="message"></textarea>
 								</div>
 							</div>
 
 
 							<div class="form-group row">
 								<div class="col-sm-12">
-									<button type="submit" class="btn btn-primary">送出</button>
+									<button type="submit" class="btn btn-primary"
+										style="width:150px;height:150px;background-image:url('images/assets/submit_button.png');"></button>
 								</div>
 							</div>
 						</form>
@@ -151,6 +158,10 @@
 
 
 			</div>
+			<!-- go to page-top -->
+			<button onclick="topFunction()" id="go-top_button" title="Go to top"
+				style="width:80px;height:91px;background-image:url('images/assets/go-top_button.png');"></button>
+
 		</div>
 
 	</div>
@@ -168,6 +179,7 @@
 			</div>
 		</footer>
 	</div>
+
 	<script>
 		$('#source').quicksand($('#destination li'), {
 			name: value
@@ -186,7 +198,43 @@
 			}
 		});
 	</script>
+	<!--page-loading js -->
+	<script>
+		$(window).load(function(){
+				$('#loading').hide(0);
+				});
+		</script>
+	<!--go to top js-->
+	<script>
+		mybutton = document.getElementById("go-top_button");
+		window.onscroll = function () {
+			scrollFunction()
+		};
 
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+		}
+
+		function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+	</script>
+
+	<!--AOS ani-->
+	<script>
+		AOS.init({
+
+			easing: 'ease-in',
+
+
+
+		});
+	</script>
 	<!--AOS ani-->
 	<script>
 		AOS.init({

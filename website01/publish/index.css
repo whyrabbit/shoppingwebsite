@@ -1,12 +1,14 @@
 @CHARSET "ISO-8859-1";
-
+ body{background-image: url("images/assets/bg_finally.png"););
+background-attachment: fixed; }
+.row{background-color:#f9e4d7;}
 /* Reset CSS
  * --------------------------------------- */
 .section {
 	margin: 8rem 0 8rem 0;
 }
 
-
+button{border-width: 0px;}
 body,
 div,
 dl,
@@ -481,7 +483,7 @@ body {
 
 	background: url('images/assets/latest-news_title.png') 0 0 no-repeat;
 	width: 300px;
-	height: 196px;
+	height: 300px;
 	font-size: 0;
 	line-height: 0;
 	text-indent: -5000px;
@@ -492,7 +494,7 @@ body {
 	display: inline-block;
 	background: url('images/assets/products_title.png') 0 0 no-repeat;
 	width: 300px;
-	height: 196px;
+	height: 300px;
 	font-size: 0;
 	line-height: 0;
 	text-indent: -5000px;
@@ -504,7 +506,7 @@ body {
 	display: inline-block;
 	background: url('images/assets/about_title.png') 0 0 no-repeat;
 	width: 300px;
-	height: 196px;
+	height: 300px;
 	font-size: 0;
 	line-height: 0;
 	text-indent: -5000px;
@@ -516,7 +518,7 @@ body {
 	display: inline-block;
 	background: url('images/assets/contact_title.png') 0 0 no-repeat;
 	width: 300px;
-	height: 196px;
+	height: 300px;
 	font-size: 0;
 	line-height: 0;
 	text-indent: -5000px;
@@ -527,7 +529,7 @@ body {
 	display: inline-block;
 	background: url('images/assets/products_title.png') 0 0 no-repeat;
 	width: 300px;
-	height: 196px;
+	height: 300px;
 	font-size: 0;
 	line-height: 0;
 	text-indent: -5000px;
@@ -538,7 +540,7 @@ body {
 	display: inline-block;
 	background: url('images/assets/sign-up_title.png') 0 0 no-repeat;
 	width: 300px;
-	height: 196px;
+	height: 300px;
 	font-size: 0;
 	line-height: 0;
 	text-indent: -5000px;
@@ -549,7 +551,7 @@ body {
 	display: inline-block;
 	background: url('images/assets/log-in_title.png') 0 0 no-repeat;
 	width: 300px;
-	height: 196px;
+	height: 300px;
 	font-size: 0;
 	line-height: 0;
 	text-indent: -5000px;
@@ -614,3 +616,105 @@ body {
 		border-color: #BF6766;
 	  }
 	  .card__title, .card-header,.card__text ,.price{ text-align: center; }
+	  /*go to page-top*/
+	#go-top_button {
+ display:none;
+  position: fixed; 
+  bottom: 30px;
+  right: 30px;
+  z-index: 99; 
+  cursor: pointer;
+  background-color:transparent;
+  box-shadow:transparent;
+}
+
+#go-top_button:hover {
+ opacity:0.5; 
+}
+/*index carousel-title*/
+/*about banner-title*/
+.about_banner_title{
+ position: absolute;
+    right: 15%;
+    bottom: 20px;
+    left: 15%;
+    z-index: 10;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-align: center;
+
+}
+.about_banner_title h3{
+display: inline-block;
+	background: url('images/assets/about_banner_title.png') 0 0 no-repeat;
+	width: 300px;
+	height: 125px;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -5000px;
+	overflow: hidden;	
+}
+/*product banner-title*/
+.product_banner_title{
+ position: absolute;
+    right: 15%;
+    bottom: 20px;
+    left: 15%;
+    z-index: 10;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-align: center;
+
+}
+.product_banner_title h3{
+display: inline-block;
+	background: url('images/assets/product_banner_title.png') 0 0 no-repeat;
+	width: 400px;
+	height: 125px;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -5000px;
+	overflow: hidden;	
+}
+/*myaccount banner-title*/
+.myaccount_banner_title{
+ position: absolute;
+    right: 15%;
+    bottom: 20px;
+    left: 15%;
+    z-index: 10;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-align: center;
+
+}
+.myaccount_banner_title h3{
+display: inline-block;
+	background: url('images/assets/myaccount_banner_title.png') 0 0 no-repeat;
+	width: 400px;
+	height: 125px;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -5000px;
+	overflow: hidden;	
+}
+/*page-loading*/
+#loading{
+z-index: 9999;
+padding: 10px 10px 5px;
+background: rgb(255, 0, 136);
+left: 0;
+top: 0;
+color: #fff;
+position: fixed;
+width: 100%;
+height: 100%;
+text-align: center;
+display: table;
+}
+#loading h3{
+	width: 100px;
+	height: 100px;
+	display: table-cell;
+    vertical-align: middle;
+}

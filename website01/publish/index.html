@@ -84,8 +84,8 @@
 </head>
 
 <body>
-
-
+	<!--page-loading-->
+	<div id='loading'><h3>正在載入頁面資料...</h3></div>
 	<!--nav-->
 	<nav class="sina-nav mobile-sidebar navbar-fixed py-4" data-top="0">
 		<div class="container">
@@ -113,7 +113,7 @@
 				<ul class="sina-menu" data-in="fadeInLeft" data-out="fadeInOut">
 					<li class="scroll"><a href="index.html">HOME</a></li>
 					<li class="active scroll"><a href="about.html">ABOUT</a></li>
-					<li class="active scroll"><a href="#about">NEWS</a></li>
+					<li class="active scroll"><a href="#section1">NEWS</a></li>
 					<li class="scroll"><a href="product.html">PRODUCTS</a></li>
 					<li class="scroll"><a href="my account.html">MY ACCOUNT</a></li>
 
@@ -123,6 +123,7 @@
 	</nav>
 
 	<div class="container">
+	
 		<div id="startchange"></div>
 		<div class="row">
 			<div class="col-12 col-lg-12">
@@ -225,10 +226,10 @@
 							</div>
 
 							<div class="product-group1 row">
-								<div class="product-inner col-sm-6" data-aos="fade-up" data-aos-delay="100">
-									<div class=" col-sm-12 product-thumb"><a href="#">
+								<div class="product-inner col-sm-6" data-aos="fade-up" data-aos-delay="200">
+									<div class=" col-sm-12 product-thumb"><a href="product.html">
 											<figure class="c4-izmir c4-border-cc-3  c4-gradient-top-left"
-												style="--primary-color: #9E7A7A; --secondary-color:#BF6766 ; --border-width: 1px;">
+												style="background-image:url('images/assets/card_hover.png');background-repeat:no-repeat;background-color:#9E7A7A;background-size:cover" >
 												<img src="img/thumb-red.jpg" alt="Sample Image">
 												<figcaption>
 													<div class="c4-reveal-down c4-delay-200">
@@ -239,10 +240,10 @@
 											</figure>
 										</a></div>
 								</div>
-								<div class="product-inner col-sm-6" data-aos="fade-up" data-aos-delay="100">
-									<div class=" col-sm-12 product-thumb"><a href="#">
+								<div class="product-inner col-sm-6" data-aos="fade-up" data-aos-delay="200">
+									<div class=" col-sm-12 product-thumb"><a href="product.html">
 											<figure class="c4-izmir c4-border-cc-3  c4-gradient-top-left"
-												style="--primary-color: #9E7A7A; --secondary-color:#BF6766 ; --border-width: 1px;">
+												style="background-image:url('images/assets/card_hover.png');background-repeat:no-repeat;background-color:#9E7A7A;background-size:cover" >
 												<img src="img/thumb-red.jpg" alt="Sample Image">
 												<figcaption>
 													<div class="c4-reveal-down c4-delay-200">
@@ -255,10 +256,10 @@
 								</div>
 							</div>
 							<div class="product-group2 row">
-								<div class="product-inner col-sm-6" data-aos="fade-up" data-aos-delay="200">
-									<div class=" col-sm-12 product-thumb"><a href="#">
+								<div class="product-inner col-sm-6" data-aos="fade-up" data-aos-delay="400">
+									<div class=" col-sm-12 product-thumb"><a href="product.html">
 											<figure class="c4-izmir c4-border-cc-3  c4-gradient-top-left"
-												style="--primary-color: #9E7A7A; --secondary-color:#BF6766 ; --border-width: 1px;">
+												style="background-image:url('images/assets/card_hover.png');background-repeat:no-repeat;background-color:#9E7A7A;background-size:cover" >
 												<img src="img/thumb-red.jpg" alt="Sample Image">
 												<figcaption>
 													<div class="c4-reveal-down c4-delay-200">
@@ -269,10 +270,10 @@
 											</figure>
 										</a></div>
 								</div>
-								<div class="product-inner col-sm-6" data-aos="fade-up" data-aos-delay="200">
-									<div class=" col-sm-12 product-thumb"><a href="#">
+								<div class="product-inner col-sm-6" data-aos="fade-up" data-aos-delay="400">
+									<div class=" col-sm-12 product-thumb"><a href="product.html">
 											<figure class="c4-izmir c4-border-cc-3  c4-gradient-top-left"
-												style="--primary-color: #9E7A7A; --secondary-color:#BF6766 ; --border-width: 1px;">
+												style="background-image:url('images/assets/card_hover.png');background-repeat:no-repeat;background-color:#9E7A7A;background-size:cover" >
 												<img src="img/thumb-red.jpg" alt="Sample Image">
 												<figcaption>
 													<div class="c4-reveal-down c4-delay-200">
@@ -289,16 +290,20 @@
 						</div>
 					</div>
 
-
+<!-- go to page-top -->
+	<button onclick="topFunction()" id="go-top_button" title="Go to top" style="width:80px;height:91px;background-image:url('images/assets/go-top_button.png');"></button>
+	</div>
 
 			
 
 			</div>
+			
+
 		</div>
 
-	</div>
 
 	</div>
+
 	<!-- Footer -->
 	<div id="page-content">
 		<footer id="sticky-footer" class="py-3  text-white-50" style="background-color: #8E354A;">
@@ -307,8 +312,30 @@
 			</div>
 		</footer>
 	</div>
+<!--page-loading js -->
+<script>
+	$(window).load(function(){
+			$('#loading').hide(0);
+			});
+	</script>
+<!--go to top js-->
+<script>
+mybutton = document.getElementById("go-top_button");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
 
-	
+function topFunction() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0; 
+}
+</script>	
+
 	<!--AOS ani-->
 	<script>
 		AOS.init({
