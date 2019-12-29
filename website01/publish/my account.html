@@ -242,7 +242,12 @@
 							const $signupPassword2 = $("#signupPassword2");
 							if ($signupName.val().length == 0 || $signupEmail.val().length == 0 || $signupPassword
 								.val().length == 0 || $signupPassword2.val().length == 0) {
-								return alert("請輸入內容!");
+									if( $signupPassword.val() != $signupPassword2.val()){
+										return alert("確認密碼錯誤!");
+									}else{
+										return alert("請輸入內容!");
+									}
+								
 							} else {
 								return alert("註冊成功!");
 							};
