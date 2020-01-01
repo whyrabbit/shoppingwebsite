@@ -166,6 +166,7 @@
   max-width: 160px;
   color: #9E7A7A;
   font-size: 14px;
+  
   font-weight: 700;
   line-height: 20px;
 }
@@ -173,13 +174,18 @@
 .sina-nav .sina-menu > li > a:hover,
 .sina-nav .sina-menu > li > a:focus {
   color: white;
+ 
+  
 }
 .title_arrow{
   visibility: hidden;
- 
+  position: relative;
+   
 }
 .sina-nav .sina-menu > li > a:hover .title_arrow{
   visibility: visible;
+  position: relative;
+
   
 }
 .sina-nav .sina-menu li .description {
