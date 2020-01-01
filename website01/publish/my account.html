@@ -143,11 +143,11 @@
 		</div>
 
 
-		<form action="/regist" method="POST">
+		<form action="/login" method="GET">
 			<div class="form-group row ">
 				<label for="inputEmail3" class="col-sm-2 col-form-label">用戶名：</label>
 				<div class="col-sm-10">
-					<input type="text" class="form-control" id="signupName" placeholder="用戶名"
+					<input type="text" class="form-control" id="loginName" placeholder="用戶名"
 						name="UserName">
 				</div>
 
@@ -156,7 +156,7 @@
 			<div class="form-group row">
 				<label for="inputPassword3" class="col-sm-2 col-form-label">密碼：</label>
 				<div class="col-sm-10">
-					<input type="password" class="form-control" id="signupPassword" placeholder="密碼"
+					<input type="password" class="form-control" id="loginPassword" placeholder="密碼"
 						name="password">
 				</div>
 			</div>
@@ -165,7 +165,7 @@
 
 			<div class="form-group row">
 				<div class="col-sm-12">
-					<button type="submit" class="btn btn-primary" id="regist" style="width:150px;height:150px;background-image:url('images/assets/log-in_button.png');"></button>
+					<button type="submit" class="btn btn-primary" id="login" style="width:150px;height:150px;background-image:url('images/assets/log-in_button.png');"></button>
 				</div>
 
 			</div>
@@ -244,6 +244,7 @@
 					}
 
 				} else {
+					
 					return alert("註冊成功!");
 				};
 

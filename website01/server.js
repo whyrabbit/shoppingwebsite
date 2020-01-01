@@ -28,6 +28,7 @@ server.post("/regist", urlencodedParser, function (req, res) { //註冊
         Email: req.body.UserEmail,
         password: req.body.password
     }; 
+    
     Users.findOne({
         "Email": req.body.UserEmail
     }, function (err, docs) { //查詢有沒有該值
