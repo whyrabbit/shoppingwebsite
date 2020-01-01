@@ -20,8 +20,10 @@
 </head>
 
 <body>
-<!--page-loading-->
-<div id='loading'><h3>正在載入頁面資料...</h3></div>
+	<!--page-loading-->
+	<div id='loading'>
+		<h3>正在載入頁面資料...</h3>
+	</div>
 
 	<!--nav-->
 	<nav class="sina-nav mobile-sidebar navbar-fixed py-4" data-top="0">
@@ -107,28 +109,28 @@
 							<div class="form-group row">
 								<label for="inputEmail3" class="col-sm-2 col-form-label">用戶名：</label>
 								<div class="col-sm-10">
-									<input type="text" class="form-control" id="inputEmail3" placeholder="用戶名"
+									<input type="text" class="form-control" id="AboutUserName" placeholder="用戶名"
 										name="UserName">
 								</div>
 							</div>
 							<div class="form-group row">
 								<label for="inputEmail3" class="col-sm-2 col-form-label">Email：</label>
 								<div class="col-sm-10">
-									<input type="email" class="form-control" id="inputEmail3" placeholder="Email"
+									<input type="email" class="form-control" id="AboutUserEmail" placeholder="Email"
 										name="UserEmail">
 								</div>
 							</div>
 							<div class="form-group row">
 								<label for="inputEmail3" class="col-sm-2 col-form-label">電話：</label>
 								<div class="col-sm-10">
-									<input type="text" class="form-control" id="inputEmail3" placeholder="電話"
+									<input type="text" class="form-control" id="AboutUserTelephone" placeholder="電話"
 										name="Telephone">
 								</div>
 							</div>
 							<div class="form-group row">
 								<label for="inputPassword3" class="col-sm-2 col-form-label">密碼：</label>
 								<div class="col-sm-10">
-									<input type="password" class="form-control" id="inputPassword3" placeholder="密碼"
+									<input type="password" class="form-control" id="AboutUserPassword" placeholder="密碼"
 										name="password">
 								</div>
 							</div>
@@ -137,7 +139,7 @@
 
 								<label for="comment" class="col-sm-2 col-form-label">訊息:</label>
 								<div class="col-sm-10">
-									<textarea class="form-control" rows="5" id="comment" placeholder="請輸入訊息！"
+									<textarea class="form-control" rows="5" id="AboutUserComment" placeholder="請輸入訊息！"
 										name="message"></textarea>
 								</div>
 							</div>
@@ -145,7 +147,7 @@
 
 							<div class="form-group row">
 								<div class="col-sm-12">
-									<button type="submit" class="btn btn-primary"
+									<button type="submit" class="btn btn-primary" id="AboutSubmit"
 										style="width:150px;height:150px;background-image:url('images/assets/submit_button.png');"></button>
 								</div>
 							</div>
@@ -179,7 +181,7 @@
 			</div>
 		</footer>
 	</div>
-
+	
 	<script>
 		$('#source').quicksand($('#destination li'), {
 			name: value
@@ -200,10 +202,10 @@
 	</script>
 	<!--page-loading js -->
 	<script>
-		$(window).load(function(){
-				$('#loading').hide(0);
-				});
-		</script>
+		$(window).load(function () {
+			$('#loading').hide(0);
+		});
+	</script>
 	<!--go to top js-->
 	<script>
 		mybutton = document.getElementById("go-top_button");
@@ -224,7 +226,25 @@
 			document.documentElement.scrollTop = 0;
 		}
 	</script>
+    <!--訊息不能填入空白-->
 
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+		$(function () {
+			const $AboutUserName = $("#AboutUserName");
+			const $AboutUserPassword = $("#AboutUserPassword");
+            const $AboutUserEmail = $("#AboutUserPassword");
+			const $AboutUserComment = $("#AboutUserComment");
+			const $AboutUserTelephone = $("#AboutUserTelephone");
+
+
+			$("#AboutSubmit").click(function () {
+				if ($AboutUserName.val().length == 0 || $AboutUserPassword.val().length == 0 || $AboutUserEmail.val().length == 0 || $AboutUserComment.val().length == 0 || $AboutUserTelephone.val().length == 0) {
+					return alert("請輸入內容!");
+				} 
+			})
+		})
+	</script>
 	<!--AOS ani-->
 	<script>
 		AOS.init({

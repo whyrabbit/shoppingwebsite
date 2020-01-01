@@ -43,12 +43,11 @@ server.post("/regist", urlencodedParser, function (req, res) { //註冊
     });
 
 });
+
 server.get("/login", urlencodedParser, function (req, res) {
     var message = {
-
         check: ""
-
-    }
+    }  
     Users.findOne({
         // get 用的是 query
         "UserName": req.query.UserName,
@@ -68,7 +67,7 @@ server.get("/login", urlencodedParser, function (req, res) {
         }
     });
 }); //登入
-server.post("/regist", urlencodedParser, function (req, res) { //About
+server.post("/about", urlencodedParser, function (req, res) { //About
     var userMessage = {
         UserName: req.body.UserName,
         Email: req.body.UserEmail,
@@ -76,9 +75,14 @@ server.post("/regist", urlencodedParser, function (req, res) { //About
         password: req.body.password,
         message:req.body.message
     }; 
-   About.insert(userMessage, function (err, newuserMessage) {})
-    
+    if(req.body.UserName.length==0 || req.body.UserEmail.length==0 ||  req.body.Telephone.length==0 ||  req.body.password.length==0 ||  req.body.message.length==0){
+        console.log("有值為0"); 
+    }else{
+        About.insert(userMessage, function (err, newuserMessage) {})
+    }
+
 });
+
 
 server.use(express.static("publish"));
 server.listen(3000);
