@@ -5570,14 +5570,21 @@ input[type=submit].btn-block {
     -ms-flex: 1;
     flex: 1
 }
+.newsWrap{
 
+    background-image: url("images/assets/bg_finally.png");
+
+
+}
 .list-group {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
     padding-left: 0;
-    margin-bottom: 0
+    margin-bottom: 0;
+    
+
 }
 
 .list-group-item-action {
@@ -5590,7 +5597,7 @@ input[type=submit].btn-block {
 .list-group-item-action:hover {
     color: #495057;
     text-decoration: none;
-    background-color: #f8f9fa
+    
 }
 
 .list-group-item-action:active {
@@ -5603,8 +5610,7 @@ input[type=submit].btn-block {
     display: block;
     padding: .75rem 1.25rem;
     margin-bottom: -1px;
-  
-    border: 1px solid rgba(0, 0, 0, .125);
+    background-image: url("images/assets/bg_finally.png");
    
 }
 
@@ -5641,7 +5647,11 @@ input[type=submit].btn-block {
 .list-group-flush .list-group-item {
     border-right: 0;
     border-left: 0;
-    border-radius: 0
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
 }
 
 .list-group-flush:first-child .list-group-item:first-child {
