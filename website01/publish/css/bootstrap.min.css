@@ -87,7 +87,7 @@ body {
     line-height: 1.5;
 
     text-align: left;
-    background-color: #fff
+    background-color: #f9e4d7;
 }
 
 [tabindex="-1"]:focus {
@@ -5603,8 +5603,9 @@ input[type=submit].btn-block {
     display: block;
     padding: .75rem 1.25rem;
     margin-bottom: -1px;
-    background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, .125)
+  
+    border: 1px solid rgba(0, 0, 0, .125);
+   
 }
 
 .list-group-item:first-child {

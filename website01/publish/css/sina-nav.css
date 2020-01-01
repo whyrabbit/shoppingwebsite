@@ -162,7 +162,7 @@
   margin-left: 8px;
 }
 .sina-nav .sina-menu > li > a {
-  padding: 20px 15px;
+  padding: 20px 1px;
   max-width: 160px;
   color: #9E7A7A;
   font-size: 14px;
@@ -178,13 +178,11 @@
   
 }
 .title_arrow{
-  visibility: hidden;
-  position: relative;
-   
+ visibility: hidden;
 }
 .sina-nav .sina-menu > li > a:hover .title_arrow{
   visibility: visible;
-  position: relative;
+ 
 
   
 }

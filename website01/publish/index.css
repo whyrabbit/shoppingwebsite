@@ -1,13 +1,13 @@
 ﻿@CHARSET "ISO-8859-1";
 
+.row {
+ 
+};
+
+
 body {
   background-image: url("images/assets/bg_finally.png");
-  );
-  background-attachment: fixed;
-}
-
-.row {
-  background-color: #f9e4d7;
+  background-repeat: repeat-x;
 }
 
 /* Reset CSS
@@ -766,9 +766,9 @@ body {
   right: 0;
   margin: auto;
   display: inline-block;
-  background: url('images/assets/loading-pic.png') 0 0 no-repeat;
-  width: 100px;
-  height: 100px;
+  background: url('images/assets/loading-pic.gif') 0 0 no-repeat;
+  width: 200px;
+  height: 200px;
   font-size: 0;
   line-height: 0;
   text-indent: -5000px;
@@ -896,3 +896,5 @@ label {
 .vert-middle {
   vertical-align: middle;
 }
+
+
