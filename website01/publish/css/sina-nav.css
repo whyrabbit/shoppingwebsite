@@ -172,8 +172,15 @@
 .sina-nav .sina-menu > li.active > a,
 .sina-nav .sina-menu > li > a:hover,
 .sina-nav .sina-menu > li > a:focus {
-  color: #9E7A7A;
-  background-color: transparent;
+  color: white;
+}
+.title_arrow{
+  visibility: hidden;
+ 
+}
+.sina-nav .sina-menu > li > a:hover .title_arrow{
+  visibility: visible;
+  
 }
 .sina-nav .sina-menu li .description {
   font-style: italic;
@@ -410,6 +417,7 @@
   .sina-nav .sina-menu > li {
     float: left;
   }
+  
   .sina-nav .sina-menu.navbar-left {
     float: left !important;
   }
