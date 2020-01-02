@@ -5,10 +5,11 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>店鋪介紹</title>
+	<title>精選商品</title>
 	<link rel="Shortcut Icon" type="image/x-icon" href="images/assets/logo.png" />
 	<!-- css-->
 	<link rel="stylesheet" type="text/css" href="index.css" />
+	<link rel="stylesheet" href="css/animate.css">
 	<!--scrollin' ani-->
 	<link rel="stylesheet" href="css/aos.css">
 	<script src="js/aos.js"></script>
@@ -17,14 +18,13 @@
 	<script src="js/jquery-2.0.2.min.js"></script>
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/sina-nav.css">
+	<!--瀑布流-->
+	<link rel="stylesheet" href="css/sortable.min.css">
+	<script src="js/sortable.min.js"></script>
 </head>
 
 <body>
-	<!--page-loading-->
-	<div id='loading'>
-		<h3>正在載入頁面資料...</h3>
-	</div>
-
+	<div id='loading'><h3>正在載入頁面資料...</h3></div>
 	<!--nav-->
 	<nav class="sina-nav mobile-sidebar navbar-fixed py-4" data-top="0">
 		<div class="container">
@@ -66,7 +66,7 @@
 	</nav>
 
 	<div class="container">
-		
+		<div id="startchange"></div>
 		<div class="row">
 			<div class="col-12 col-lg-12">
 				<!--banner-->
@@ -77,115 +77,110 @@
 							<div class="carousel-item item active ">
 								<img class="d-block w-100 " src="images/assets/banner.jpg" alt="banner"
 									data-aos="fade-right" data-aos-delay="100">
-								<div class=" about_banner_title" data-aos="fade-down" data-aos-delay="400">
-									<h3>關於</h3>
+								<div class="news_banner_title" data-aos="fade-down" data-aos-delay="400">
+									<h3>最新消息</h3>
 								</div>
 							</div>
 
 						</div>
+
+					</div>
+				</div>
+				<!--news-->
+				<div class="section" id="section1">
+					<div class="aboutWrap">
+						<div class="section-title1"data-aos="fade-down" data-aos-delay="200">
+
+							<h1 class="latest_news">最新消息</h1>
+
+						</div>
+
 
 					</div>
 				</div>
 				<!--nav's color ctrl-->
 				<div id="startchange"></div>
-				<!--about-->
-				<div class="section" id="section1">
-					<div class="aboutWrap">
-						<div class="section-title3"data-aos="fade-down" data-aos-delay="200">
 
-							<h1 class="about">店鋪介紹</h1>
+				<!-- newss list-->
+				<main class="sortable">
 
+					<div class="wrapper">
+						<div class="nav-inner ">
+							<ul class="sortable__nav " data-aos="fade-down" data-delay="400">
+								<li>
+									<a data-sjslink="all" class="nav__link">
+										全部
+									</a>
+								</li>
+								<li>
+									<a data-sjslink="notice" class="nav__link">
+									公告
+									</a>
+								</li>
+								<li>
+									<a data-sjslink="on" class="nav__link">
+										新上架
+									</a>
+								</li>
+							
+							</ul>
 						</div>
-						<div class="intro" data-aos="fade-up" data-aos-delay="400">
-							<h2><p>赤齋堂＊古著道行羽織</p></h2>
-							<h4>
-							<p>1.日本帶回骨董和服羽織道行，各款僅有一件。</p><br>
-							<p>商品如未特別標註，皆為古著二手全新品，都有檢查及整理。</p><br>
-							<p>3.部分會有骨董痕跡可能會有些瑕疵、泛黃但均不影響穿著，外觀特別嚴重之瑕疵都會註明。</p><br>
-							<p>4.部分商品袖口口袋固定白線未拆為正常現象，是全新的證明。</p><br>
-							<p>5.售出一律不接受退換介意者請勿拍。</p>
-						</h4>
-						</div>
+						<div id="sortable" class="sjs-default">
+							<div data-sjsel="notice">
+								<a href="#" class="list-group-item list-group-item-action " data-aos="fade-up"
+								data-aos-delay="600">
+								<div class="newsWrap">
+									<h1 class="news-date">date</h1>
+									<p class="news-text">content</p>
+								</div>
+								<span id="one" class="img"></span>
 
+							</a>
+							</div>
+							<div data-sjsel="notice">
+								<a href="#" class="list-group-item list-group-item-action " data-aos="fade-up"
+								data-aos-delay="600">
+								<div class="newsWrap">
+									<h1 class="news-date">date</h1>
+									<p class="news-text">content</p>
+								</div>
+								<span id="one" class="img"></span>
+
+							</a>
+							</div>
+							
+							<div data-sjsel="on">
+								<a href="#" class="list-group-item list-group-item-action " data-aos="fade-up"
+								data-aos-delay="600">
+								<div class="newsWrap">
+									<h1 class="news-date">date</h1>
+									<p class="news-text">content</p>
+								</div>
+								<span id="one" class="img"></span>
+
+							</a>
+<!--notice-->
+							</div>
+						</div>
 					</div>
-				</div>
-
-				<!-- contact -->
-				<div class="section" id="section2">
-					<div class="contactWrap">
-						<div class="section-title4"data-aos="fade-down" data-aos-delay="200">
-
-							<h1 class="contact">與我聯絡</h1>
-
-						</div>
-						<form data-aos="fade-up" data-aos-delay="400" action="about" method="POST">
-							<div class="form-group row">
-								<label for="inputEmail3" class="col-sm-2 col-form-label">用戶名：</label>
-								<div class="col-sm-10">
-									<input type="text" class="form-control" id="AboutUserName" placeholder="用戶名"
-										name="UserName">
-								</div>
-							</div>
-							<div class="form-group row">
-								<label for="inputEmail3" class="col-sm-2 col-form-label">Email：</label>
-								<div class="col-sm-10">
-									<input type="email" class="form-control" id="AboutUserEmail" placeholder="Email"
-										name="UserEmail">
-								</div>
-							</div>
-							<div class="form-group row">
-								<label for="inputEmail3" class="col-sm-2 col-form-label">電話：</label>
-								<div class="col-sm-10">
-									<input type="text" class="form-control" id="AboutUserTelephone" placeholder="電話"
-										name="Telephone">
-								</div>
-							</div>
-							<div class="form-group row">
-								<label for="inputPassword3" class="col-sm-2 col-form-label">密碼：</label>
-								<div class="col-sm-10">
-									<input type="password" class="form-control" id="AboutUserPassword" placeholder="密碼"
-										name="password">
-								</div>
-							</div>
-							<div class="form-group row">
-
-
-								<label for="comment" class="col-sm-2 col-form-label">訊息:</label>
-								<div class="col-sm-10">
-									<textarea class="form-control" rows="5" id="AboutUserComment" placeholder="請輸入訊息！"
-										name="message"></textarea>
-								</div>
-							</div>
-
-
-							<div class="form-group row">
-								<div class="col-sm-12">
-									<button type="submit" class="btn btn-primary" id="AboutSubmit"
-										style="width:150px;height:150px;background-image:url('images/assets/submit_button.png');"></button>
-								</div>
-							</div>
-						</form>
-
-					</div>
-				</div>
-
-
-
-
+					<!-- go to page-top -->
+					<button onclick="topFunction()" id="go-top_button" title="Go to top"
+						style="width:80px;height:91px;background-image:url('images/assets/go-top_button.png');"></button>
 			</div>
-			<!-- go to page-top -->
-			<button onclick="topFunction()" id="go-top_button" title="Go to top"
-				style="width:80px;height:91px;background-image:url('images/assets/go-top_button.png');"></button>
+			</main>
+			<!--sortable.js-->
+			<script type="text/javascript">
+				document.querySelector('#sortable').sortablejs()
+			</script>
 
 		</div>
 
 	</div>
+	</div>
 
 	</div>
 
-
-
-
+	</div>
 	<!-- Footer -->
 	<div id="page-content">
 		<footer id="sticky-footer" class="py-3  text-white-50" style="background-color: #8E354A;">
@@ -194,25 +189,6 @@
 			</div>
 		</footer>
 	</div>
-	
-	<script>
-		$('#source').quicksand($('#destination li'), {
-			name: value
-		}, function () {
-			// callback code
-		});
-		$("#content").quicksand($("#data > li"), {
-			duration: 1000,
-		}, function () { // callback function
-			$('#content a').tooltip();
-		});
-		$("#content").quicksand($("#data > li"), {
-			duration: 1000,
-			enhancement: function () {
-				Cufon.refresh('#content span');
-			}
-		});
-	</script>
 	<!--page-loading js -->
 	<script>
 		$(window).load(function () {
@@ -239,36 +215,7 @@
 			document.documentElement.scrollTop = 0;
 		}
 	</script>
-    <!--訊息不能填入空白-->
-
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	<script>
-		$(function () {
-			const $AboutUserName = $("#AboutUserName");
-			const $AboutUserPassword = $("#AboutUserPassword");
-            const $AboutUserEmail = $("#AboutUserPassword");
-			const $AboutUserComment = $("#AboutUserComment");
-			const $AboutUserTelephone = $("#AboutUserTelephone");
-
-
-			$("#AboutSubmit").click(function () {
-				if ($AboutUserName.val().length == 0 || $AboutUserPassword.val().length == 0 || $AboutUserEmail.val().length == 0 || $AboutUserComment.val().length == 0 || $AboutUserTelephone.val().length == 0) {
-					return alert("請輸入內容!");
-				} 
-			})
-		})
-	</script>
-	<!--AOS ani-->
-	<script>
-		AOS.init({
-
-			easing: 'ease-in',
-
-
-
-		});
-	</script>
-	<!--AOS ani-->
+	<!--AOS ani.js-->
 	<script>
 		AOS.init({
 
@@ -276,7 +223,6 @@
 
 		});
 	</script>
-
 	<!-- nav js -->
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
@@ -304,6 +250,29 @@
 		});
 	</script>
 
+	<!--card js-->
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/main.js"></script> <!-- Gem jQuery -->
+	<script>
+		$(function () {
+			//Trigger layout after each image loads and initialise Mansonry
+			$('#waterfallArea').imagesLoaded(function () {
+				$('#waterfallArea').masonry({
+					itemSelector: '.content_box',
+					columnWidth: 30, //gap
+					animate: true,
+					horizontalOrder: true,
+					originTop: true
+				});
+			});
+
+			//Fade Out the loading screen when all images loaded
+			$('#waterfallArea').imagesLoaded().always(function (instance) {
+				$('.loadingScreen').fadeOut();
+			})
+		});
+	</script>
+
 	<!-- For All Plug-in Activation & Others -->
 	<script type="text/javascript">
 		$(document).ready(function () {
@@ -311,7 +280,10 @@
 			new WOW().init();
 		});
 	</script>
-
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+	<script src="js/anime.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 
 </html>
