@@ -899,9 +899,7 @@ label {
 
 /*carousel-caption*/
 .carousel-caption1{
- 
   text-align: left;
-
   margin: 0 auto;
 display: inline-block;
   background: url('images/assets/slider_title.png') 0 0 no-repeat;
@@ -915,7 +913,32 @@ display: inline-block;
 
 .product-inner{
 margin: 0 auto;
+}
 
+/*view-more btn*/
+.view-more{
+  display: inline-block;
+  background: url('images/assets/view-more_button.png') 0 0 no-repeat;
+  width: 150px;
+  height: 150px;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -5000px;
+  overflow: hidden;
+}
 
-
+.view-more:hover{
+  display: inline-block;
+  background: url('images/assets/button_close.png') 0 0 no-repeat;
+  transition: ease-in-out 0.5s;
+  width: 150px;
+  height: 150px;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -5000px;
+  overflow: hidden;
+  -webkit-transition: ease-in-out 0.5s;
+  -moz-transition: ease-in-out 0.5s;
+  -ms-transition: ease-in-out 0.5s;
+  -o-transition: ease-in-out 0.5s;
 }
