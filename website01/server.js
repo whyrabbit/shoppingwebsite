@@ -6,7 +6,7 @@ var urlencodedParser = bodyParser.urlencoded({ // 创建 application/x-www-form-
     //var Strategy = require('passport-local').Strategy;//登入註冊
     extended: false
 })
-var session = require('express-session');
+
 //for upload file
 var formidable = require("formidable"); //可以用post的東西
 var fs = require("fs"); //文件系統
@@ -22,15 +22,7 @@ var About = new DB({ //表單資料庫
     filename: 'About.db',
     autoload: true
 })
-server.use(session({
-    resave: false, //添加 resave 选项
-    saveUninitialized: true, //添加 saveUninitialized 选项
-    secret: 'express',
-    store: new DB({
-        url: 'Users.db',
-        collection: 'sessions'
-    })
-}));
+
 server.get("/login", urlencodedParser, function (req, res) { //登入
 
     var message = {
@@ -49,7 +41,6 @@ server.get("/login", urlencodedParser, function (req, res) { //登入
             console.log("沒值");
         } else {
             message.check = "歡迎使用";
-            req.session.user = user; // 使用者名稱存入session中
             res.send(message);
             console.log("有值");
             return;
