@@ -6,8 +6,8 @@
 
 
 body {
-  background-image: url("images/assets/bg_finally.png");
-  background-repeat: repeat-x;
+ 
+  
 }
 
 /* Reset CSS
@@ -898,3 +898,17 @@ label {
 }
 
 
+.carousel-caption1{
+ 
+  text-align: left;
+
+  margin: 0 auto;
+display: inline-block;
+  background: url('images/assets/slider_title.png') 0 0 no-repeat;
+  width: 300px;
+  height: 64px;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -5000px;
+  overflow: hidden;
+}

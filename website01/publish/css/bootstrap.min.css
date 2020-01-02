@@ -85,9 +85,8 @@ body {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-
     text-align: left;
-    background-color: #f9e4d7;
+    background-color: #f8d2bb;
 }
 
 [tabindex="-1"]:focus {
@@ -5570,12 +5569,7 @@ input[type=submit].btn-block {
     -ms-flex: 1;
     flex: 1
 }
-.newsWrap{
 
-    background-image: url("images/assets/bg_finally.png");
-
-
-}
 .list-group {
     display: -ms-flexbox;
     display: flex;
