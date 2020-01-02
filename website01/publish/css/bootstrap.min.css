@@ -411,7 +411,8 @@ h1 {
 
 .h2,
 h2 {
-    font-size: 2rem
+    font-size: 2rem;
+    color: #8E354A;
 }
 
 .h3,
@@ -421,7 +422,8 @@ h3 {
 
 .h4,
 h4 {
-    font-size: 1.5rem
+    font-size: 1.5rem;
+    color: #9E7A7A;
 }
 
 .h5,
@@ -2159,7 +2161,8 @@ select.form-control:focus::-ms-value {
     padding-bottom: calc(.375rem + 1px);
     margin-bottom: 0;
     font-size: inherit;
-    line-height: 1.5
+    line-height: 1.5;
+    color:#8E354A;
 }
 
 .col-form-label-lg {

@@ -1,15 +1,4 @@
 ﻿@CHARSET "ISO-8859-1";
-
-.row {
- 
-};
-
-
-body {
- 
-  
-}
-
 /* Reset CSS
  * --------------------------------------- */
 .section {
@@ -118,8 +107,7 @@ acronym {
  * --------------------------------------- */
 body {
   font-family: arial, helvetica;
-  color: #333;
-  color: rgba(0, 0, 0, 0.5);
+  
 }
 
 .wrap {
