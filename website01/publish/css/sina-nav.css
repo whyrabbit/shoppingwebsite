@@ -66,6 +66,10 @@
 .sina-nav .container-fluid {
   position: relative;
 }
+.sina-brand:hover
+
+
+{opacity: 0.5;}
 .sina-nav .sina-brand {
  
   height: 60px;
