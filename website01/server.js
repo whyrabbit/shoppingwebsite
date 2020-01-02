@@ -2,32 +2,68 @@ var express = require("express"); //目前最穩定、使用最廣泛開發框�
 var cookieParser = require('cookie-parser'); //可以用在登入上
 var bodyParser = require('body-parser');
 var server = express();
-// 创建 application/x-www-form-urlencoded 编码解析
-//var Strategy = require('passport-local').Strategy;//登入註冊
-var urlencodedParser = bodyParser.urlencoded({
+var urlencodedParser = bodyParser.urlencoded({ // 创建 application/x-www-form-urlencoded 编码解析
+    //var Strategy = require('passport-local').Strategy;//登入註冊
     extended: false
 })
+var session = require('express-session');
 //for upload file
 var formidable = require("formidable"); //可以用post的東西
 var fs = require("fs"); //文件系統
 
+
 //取得NEDB套件
 var DB = require('nedb');
-var Users = new DB({
+var Users = new DB({ //使用者的資料庫
     filename: 'Users.db',
     autoload: true
 }); //autoload:自動將資料庫載入記憶體
-var About=new DB({
+var About = new DB({ //表單資料庫
     filename: 'About.db',
     autoload: true
 })
+server.use(session({
+    resave: false, //添加 resave 选项
+    saveUninitialized: true, //添加 saveUninitialized 选项
+    secret: 'express',
+    store: new DB({
+        url: 'Users.db',
+        collection: 'sessions'
+    })
+}));
+server.get("/login", urlencodedParser, function (req, res) { //登入
+
+    var message = {
+        check: ""
+    }
+    Users.findOne({
+        // get 用的是 query
+        "UserName": req.query.UserName,
+        "password": req.query.password
+    }, function (err, docs) { //查詢有沒有該值
+        if (docs == null) { //如果沒有
+            console.log(req.query.UserName);
+            message.check = "錯誤帳號密碼";
+            res.send(message);
+            return;
+            console.log("沒值");
+        } else {
+            message.check = "歡迎使用";
+            req.session.user = user; // 使用者名稱存入session中
+            res.send(message);
+            console.log("有值");
+            return;
+        }
+    });
+});
 
 server.post("/regist", urlencodedParser, function (req, res) { //註冊
     var user = {
         UserName: req.body.UserName,
         Email: req.body.UserEmail,
         password: req.body.password
-    }; 
+    };
+
     Users.findOne({
         "Email": req.body.UserEmail
     }, function (err, docs) { //查詢有沒有該值
@@ -44,40 +80,18 @@ server.post("/regist", urlencodedParser, function (req, res) { //註冊
 
 });
 
-server.get("/login", urlencodedParser, function (req, res) {
-    var message = {
-        check: ""
-    }  
-    Users.findOne({
-        // get 用的是 query
-        "UserName": req.query.UserName,
-        "password": req.query.password
-    }, function (err, docs) { //查詢有沒有該值
-        if (docs == null) { //如果沒有
-            console.log( req.query.UserName);
-            message.check="錯誤帳號密碼" ; 
-            res.send(message); 
-            return;
-            console.log("沒值");
-        } else {
-            message.check="歡迎使用" ; 
-            res.send(message); 
-            console.log("有值");
-            return;
-        }
-    });
-}); //登入
+
 server.post("/about", urlencodedParser, function (req, res) { //About
     var userMessage = {
         UserName: req.body.UserName,
         Email: req.body.UserEmail,
-        Telephone:req.body.Telephone,
+        Telephone: req.body.Telephone,
         password: req.body.password,
-        message:req.body.message
-    }; 
-    if(req.body.UserName.length==0 || req.body.UserEmail.length==0 ||  req.body.Telephone.length==0 ||  req.body.password.length==0 ||  req.body.message.length==0){
-        console.log("有值為0"); 
-    }else{
+        message: req.body.message
+    };
+    if (req.body.UserName.length == 0 || req.body.UserEmail.length == 0 || req.body.Telephone.length == 0 || req.body.password.length == 0 || req.body.message.length == 0) {
+        console.log("有值為0");
+    } else {
         About.insert(userMessage, function (err, newuserMessage) {})
     }
 
