@@ -10,7 +10,7 @@ var urlencodedParser = bodyParser.urlencoded({ // 创建 application/x-www-form-
 //for upload file
 var formidable = require("formidable"); //可以用post的東西
 var fs = require("fs"); //文件系統
-
+var session = require('express-session');
 
 //取得NEDB套件
 var DB = require('nedb');
@@ -40,6 +40,7 @@ server.get("/login", urlencodedParser, function (req, res) { //登入
             return;
             console.log("沒值");
         } else {
+        
             message.check = "歡迎使用";
             res.send(message);
             console.log("有值");
@@ -49,12 +50,9 @@ server.get("/login", urlencodedParser, function (req, res) { //登入
 });
 
 server.post("/regist", urlencodedParser, function (req, res) { //註冊
-    var user = {
-        UserName: req.body.UserName,
-        Email: req.body.UserEmail,
-        password: req.body.password
-    };
-
+   /* var message1 = {
+        check: ""
+    } */
     Users.findOne({
         "Email": req.body.UserEmail
     }, function (err, docs) { //查詢有沒有該值
@@ -62,9 +60,18 @@ server.post("/regist", urlencodedParser, function (req, res) { //註冊
             if (req.body.rpassword != req.body.password) { //查詢重複密碼是否正確
                 console.log("確認密碼不同，請重新輸入"); //不正確
             } else { //正確新增
+                var user = {
+                    UserName: req.body.UserName,
+                    Email: req.body.UserEmail,
+                    password: req.body.password
+                };
                 Users.insert(user, function (err, newUser) {})
+               /* message1.check = "註冊成功";
+                res.send(message1);
+                return;*/
             };
         } else {
+           
             console.log("已註冊"); //有該值則已註冊
         }
     });

@@ -244,8 +244,25 @@
 					}
 
 				} else {
+				/*	$.ajax({
+						
+						url: '/regist',
+						data: {
+							Email: $signupEmail.val(),	
+						},
+						dataType: 'json',
+						type: 'get',
+						success: function (registdata) {
+							return alert(registdata.check);
+						},
+						error: function (registdata) {
+							return alert("此信箱已註冊!");
+						}
+					})
+					return false;*/
 					
 					return alert("註冊成功!");
+					return false;
 				};
 
 			})
