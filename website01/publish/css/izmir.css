@@ -1,14 +1,14 @@
 /* Izmir - ImageHover CSS LIbrary
   ----------------------------- */
 .c4-izmir {
-  --text-color: #ffffff;
+  --text-color: #f8d2bb;
   --primary-color: #00B4DB;
   --secondary-color: #0083B0;
   --padding: 1em;
   --transition-duration: 600ms;
   --border-margin: 15px;
   --border-width: 3px;
-  --border-color: #ffffff;
+  --border-color: #f8d2bb;
   --border-radius: 3px;
   --image-opacity: 0.25;
   display: inline-flex;

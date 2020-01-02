@@ -5583,20 +5583,21 @@ input[type=submit].btn-block {
 
 .list-group-item-action {
     width: 100%;
-    color: #495057;
+    color: #8E354A;
     text-align: inherit
 }
 
 .list-group-item-action:focus,
 .list-group-item-action:hover {
-    color: #495057;
+    color:#9E7A7A;
     text-decoration: none;
     
 }
 
 .list-group-item-action:active {
-    color: #212529;
-    background-color: #e9ecef
+    color: #8E354A;
+    background-color: #e9ecef;
+    background: url('images/assets/bg_finally.png');
 }
 
 .list-group-item {
@@ -5604,8 +5605,6 @@ input[type=submit].btn-block {
     display: block;
     padding: .75rem 1.25rem;
     margin-bottom: -1px;
-    background-image: url("images/assets/bg_finally.png");
-   
 }
 
 .list-group-item:first-child {
