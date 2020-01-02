@@ -24,7 +24,9 @@
 </head>
 
 <body>
-	<div id='loading'><h3>正在載入頁面資料...</h3></div>
+	<div id='loading'>
+		<h3>正在載入頁面資料...</h3>
+	</div>
 	<!--nav-->
 	<nav class="sina-nav mobile-sidebar navbar-fixed py-4" data-top="0">
 		<div class="container">
@@ -51,28 +53,28 @@
 			<div class="collapse navbar-collapse" id="navbar-menu">
 				<ul class="sina-menu" data-in="fadeInLeft" data-out="fadeInOut">
 					<li class="scroll"><a href="index.html"><img class="title_arrow"
-						src="images/assets/title_arrow.png">HOME</a></li>
+								src="images/assets/title_arrow.png">HOME</a></li>
 					<li class="active scroll"><a href="about.html"><img class="title_arrow"
-						src="images/assets/title_arrow.png">ABOUT</a></li>
+								src="images/assets/title_arrow.png">ABOUT</a></li>
 					<li class="active scroll"><a href="news.html"><img class="title_arrow"
-						src="images/assets/title_arrow.png">NEWS</a></li>
+								src="images/assets/title_arrow.png">NEWS</a></li>
 					<li class="scroll"><a href="product.html"><img class="title_arrow"
-						src="images/assets/title_arrow.png">PRODUCTS</a></li>
+								src="images/assets/title_arrow.png">PRODUCTS</a></li>
 					<li class="scroll"><a href="my account.html"><img class="title_arrow"
-						src="images/assets/title_arrow.png">MY ACCOUNT</a></li>
+								src="images/assets/title_arrow.png">MY ACCOUNT</a></li>
 				</ul>
 			</div><!-- /.navbar-collapse -->
-		</div><!-- .container -->
+		</div>
 	</nav>
 
+	<!-- .container -->
 	<div class="container">
-		<div id="startchange"></div>
+
 		<div class="row">
 			<div class="col-12 col-lg-12">
 				<!--banner-->
 				<div id="banner">
 					<div id="carouselExampleIndicators" class="carousel slide carousel-fade caption-animate ">
-
 						<div class="carousel-inner">
 							<div class="carousel-item item active ">
 								<img class="d-block w-100 " src="images/assets/banner.jpg" alt="banner"
@@ -81,29 +83,24 @@
 									<h3>精選商品</h3>
 								</div>
 							</div>
-
 						</div>
-
 					</div>
 				</div>
+
 				<!--products-->
 				<div class="section" id="section1">
 					<div class="aboutWrap">
 						<div class="section-title5">
-
 							<h1 class="products">精選商品</h1>
-
 						</div>
-
-
 					</div>
 				</div>
+
 				<!--nav's color ctrl-->
 				<div id="startchange"></div>
 
 				<!-- products display-->
 				<main class="sortable">
-
 					<div class="wrapper">
 						<div class="nav-inner ">
 							<ul class="sortable__nav " data-aos="fade-down" data-delay="100">
@@ -174,6 +171,7 @@
 								</div>
 							</div>
 							<!--black-->
+
 							<div data-sjsel="red">
 								<div class="card" data-aos="fade-up" data-aos-delay="200">
 									<div class="card-body">
@@ -321,6 +319,7 @@
 								</div>
 							</div>
 							<!--red-->
+
 							<div data-sjsel="green">
 								<div class="card" data-aos="fade-up" data-aos-delay="800">
 									<div class="card-body">
@@ -376,6 +375,7 @@
 								</div>
 							</div>
 							<!--green-->
+
 							<div data-sjsel="violet">
 								<div class="card" data-aos="fade-up" data-aos-delay="1000">
 									<div class="card-body">
@@ -470,24 +470,20 @@
 
 						</div>
 					</div>
+
 					<!-- go to page-top -->
 					<button onclick="topFunction()" id="go-top_button" title="Go to top"
 						style="width:80px;height:91px;background-image:url('images/assets/go-top_button.png');"></button>
 			</div>
 			</main>
-			<!--sortable.js-->
-			<script type="text/javascript">
-				document.querySelector('#sortable').sortablejs()
-			</script>
+
 
 		</div>
-
+	</div>
+	</div>
 	</div>
 	</div>
 
-	</div>
-
-	</div>
 	<!-- Footer -->
 	<div id="page-content">
 		<footer id="sticky-footer" class="py-3  text-white-50" style="background-color: #8E354A;">
@@ -496,12 +492,19 @@
 			</div>
 		</footer>
 	</div>
+
+	<!--sortable.js-->
+	<script type="text/javascript">
+		document.querySelector('#sortable').sortablejs()
+	</script>
+
 	<!--page-loading js -->
 	<script>
 		$(window).load(function () {
 			$('#loading').hide(0);
 		});
 	</script>
+
 	<!--go to top js-->
 	<script>
 		mybutton = document.getElementById("go-top_button");
@@ -522,6 +525,7 @@
 			document.documentElement.scrollTop = 0;
 		}
 	</script>
+
 	<!--AOS ani.js-->
 	<script>
 		AOS.init({
@@ -530,11 +534,13 @@
 
 		});
 	</script>
+
 	<!-- nav js -->
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/sina-nav.js"></script>
+
 	<!-- nav scroll js -->
 	<script>
 		$(document).ready(function () {

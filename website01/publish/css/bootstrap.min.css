@@ -4,18 +4,26 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
- /*footer*--------------------------------------- */
+@font-face {
+    font-family: 'KouzanBrushFontGyousyo';
+    src: url('fonts/KouzanBrushFontGyousyo.woff') format("woff"),
+        url('fonts/KouzanBrushFontGyousyo.ttf') format("truetype"),
+        url('fonts/KouzanBrushFontGyousyo.eot') format("embedded-opentype");
+}
+
+/*footer*--------------------------------------- */
 #page-content {
-	flex: 1 0 auto;
-	position: relative;
-	width: 100%;
-	bottom: 0;
-  }
-  
-  #sticky-footer {
-	flex-shrink: none;
-  }
- /*footer*--------------------------------------- */
+    flex: 1 0 auto;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+#sticky-footer {
+    flex-shrink: none;
+}
+
+/*footer*--------------------------------------- */
 :root {
     --blue: #007bff;
     --indigo: #6610f2;
@@ -81,12 +89,13 @@ section {
 
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: 'KouzanBrushFontGyousyo';
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     text-align: left;
     background-color: #f8d2bb;
+
 }
 
 [tabindex="-1"]:focus {
@@ -2162,7 +2171,7 @@ select.form-control:focus::-ms-value {
     margin-bottom: 0;
     font-size: inherit;
     line-height: 1.5;
-    color:#8E354A;
+    color: #8E354A;
 }
 
 .col-form-label-lg {
@@ -2649,14 +2658,14 @@ fieldset:disabled a.btn {
 
 .btn-primary {
     color: #9E7A7A;
-    background-color:transparent;
-    
+    background-color: transparent;
+
 }
 
 .btn-primary:hover {
-    color:  #8E354A;
-   
-   
+    color: #8E354A;
+
+
 }
 
 .btn-primary.focus,
@@ -4816,7 +4825,7 @@ input[type=submit].btn-block {
     -moz-border-radius: .25rem;
     -ms-border-radius: .25rem;
     -o-border-radius: .25rem;
-   
+
 }
 
 .card>hr {
@@ -4842,7 +4851,7 @@ input[type=submit].btn-block {
 
 .card-title {
     margin-bottom: .75rem;
-  
+
 }
 
 .card-subtitle {
@@ -4864,7 +4873,7 @@ input[type=submit].btn-block {
 
 .card-header {
     padding: .75rem 1.25rem;
-    margin-bottom: 0; 
+    margin-bottom: 0;
 }
 
 .card-header:first-child {
@@ -4877,8 +4886,8 @@ input[type=submit].btn-block {
 
 .card-footer {
     padding: .75rem 1.25rem;
-    background-color:#8E354A;
-  color: #9E7A7A;
+    background-color: #8E354A;
+    color: #9E7A7A;
 
 }
 
@@ -4914,7 +4923,7 @@ input[type=submit].btn-block {
     -moz-border-radius: calc(.25rem - 1px);
     -ms-border-radius: calc(.25rem - 1px);
     -o-border-radius: calc(.25rem - 1px);
-    
+
 }
 
 .card-img-top {
@@ -5580,7 +5589,7 @@ input[type=submit].btn-block {
     flex-direction: column;
     padding-left: 0;
     margin-bottom: 0;
-    
+
 
 }
 
@@ -5592,9 +5601,9 @@ input[type=submit].btn-block {
 
 .list-group-item-action:focus,
 .list-group-item-action:hover {
-    color:#9E7A7A;
+    color: #9E7A7A;
     text-decoration: none;
-    
+
 }
 
 .list-group-item-action:active {
@@ -6445,19 +6454,27 @@ button.close {
     .carousel-fade .carousel-item-next,
     .carousel-fade .carousel-item-prev,
     .carousel-fade .carousel-item.active {
-        -webkit-transform: translate3d(0, 0, 0)    ;
-        transform: translate3d(0, 0, 0)    ;
-        -moz-transform: translate3d(0, 0, 0)    ;
-        -ms-transform: translate3d(0, 0, 0)    ;
-        -o-transform: translate3d(0, 0, 0)    ;
-}
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+    }
 }
 
 
 .carousel-control-next,
-.carousel-control-prev { visibility: hidden; }
-.carousel:hover .carousel-control-prev{ visibility: visible; }
-.carousel:hover .carousel-control-next{ visibility: visible; }
+.carousel-control-prev {
+    visibility: hidden;
+}
+
+.carousel:hover .carousel-control-prev {
+    visibility: visible;
+}
+
+.carousel:hover .carousel-control-next {
+    visibility: visible;
+}
 
 .carousel-control-next,
 .carousel-control-prev {
@@ -6473,8 +6490,8 @@ button.close {
     width: 15%;
     color: rgb(133, 39, 39);
     text-align: center;
- 
-    
+
+
 }
 
 .carousel-control-next:focus,
@@ -6485,7 +6502,6 @@ button.close {
     text-decoration: none;
     outline: 0;
     opacity: .9
-    
 }
 
 .carousel-control-prev {
@@ -6507,8 +6523,8 @@ button.close {
 
 .carousel-control-prev-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%238E354A' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E")
-    
 }
+
 .carousel-control-next-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%238E354A' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E")
 }
@@ -6527,7 +6543,7 @@ button.close {
     margin-right: 15%;
     margin-left: 15%;
     list-style: none;
- 
+
 }
 
 .carousel-indicators li {
@@ -6540,7 +6556,7 @@ button.close {
     margin-left: 3px;
     text-indent: -999px;
     cursor: pointer;
-    background-color: #9E7A7A  ;
+    background-color: #9E7A7A;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -6556,9 +6572,9 @@ button.close {
     width: 100%;
     height: 10px;
     content: "";
-    
-    
-   
+
+
+
 }
 
 .carousel-indicators li::after {
@@ -6574,7 +6590,7 @@ button.close {
 .carousel-indicators .active {
     width: 12px;
     height: 12px;
-    background-color: #8E354A  ;
+    background-color: #8E354A;
     border-radius: 10px;
 }
 
@@ -6589,41 +6605,45 @@ button.close {
     color: #fff;
     text-align: center;
 }
+
 /*caption ani*/
 .caption-animate .item.active .carousel-caption {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-  }
-  .caption-animate  .item.active .carousel-caption.infinite {
+}
+
+.caption-animate .item.active .carousel-caption.infinite {
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
-  }
-  
-  .caption-animate  .item.active .carousel-caption.hinge {
+}
+
+.caption-animate .item.active .carousel-caption.hinge {
     -webkit-animation-duration: 2s;
     animation-duration: 2s;
-  }
-  
-  .caption-animate .item.active .carousel-caption.flipOutX,
-  .caption-animate .item.active .carousel-caption.flipOutY,
-  .caption-animate .item.active .carousel-caption.bounceIn,
-  .caption-animate .item.active .carousel-caption.bounceOut {
+}
+
+.caption-animate .item.active .carousel-caption.flipOutX,
+.caption-animate .item.active .carousel-caption.flipOutY,
+.caption-animate .item.active .carousel-caption.bounceIn,
+.caption-animate .item.active .carousel-caption.bounceOut {
     -webkit-animation-duration: .75s;
     animation-duration: .75s;
-  }
-  .caption-animate .item .carousel-caption.fadeIn,
-  .caption-animate .item .carousel-caption.fadeInDown,
-  .caption-animate .item .carousel-caption.fadeInDownBig,
-  .caption-animate .item .carousel-caption.fadeInLeft,
-  .caption-animate .item .carousel-caption.fadeInLeftBig,
-  .caption-animate .item .carousel-caption.fadeInRight,
-  .caption-animate .item .carousel-caption.fadeInRightBig,
-  .caption-animate .item .carousel-caption.fadeInUp,
-  .caption-animate .item .carousel-caption.fadeInUpBig{
-    opacity:0;
-  }
+}
+
+.caption-animate .item .carousel-caption.fadeIn,
+.caption-animate .item .carousel-caption.fadeInDown,
+.caption-animate .item .carousel-caption.fadeInDownBig,
+.caption-animate .item .carousel-caption.fadeInLeft,
+.caption-animate .item .carousel-caption.fadeInLeftBig,
+.caption-animate .item .carousel-caption.fadeInRight,
+.caption-animate .item .carousel-caption.fadeInRightBig,
+.caption-animate .item .carousel-caption.fadeInUp,
+.caption-animate .item .carousel-caption.fadeInUpBig {
+    opacity: 0;
+}
+
 /*caption ani*/
 
 .align-baseline {

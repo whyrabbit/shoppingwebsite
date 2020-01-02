@@ -1,4 +1,5 @@
 ﻿@CHARSET "ISO-8859-1";
+
 /* Reset CSS
  * --------------------------------------- */
 .section {
@@ -107,7 +108,7 @@ acronym {
  * --------------------------------------- */
 body {
   font-family: arial, helvetica;
-  
+
 }
 
 .wrap {
@@ -581,6 +582,7 @@ body {
   overflow: hidden;
 
 }
+
 /*slider,banner*/
 #slider,
 #banner {
@@ -742,6 +744,7 @@ body {
   text-indent: -5000px;
   overflow: hidden;
 }
+
 /*news banner-title*/
 .news_banner_title {
   position: absolute;
@@ -765,6 +768,7 @@ body {
   text-indent: -5000px;
   overflow: hidden;
 }
+
 /*page-loading*/
 #loading {
   z-index: 9999;
@@ -920,10 +924,10 @@ label {
 }
 
 /*carousel-caption*/
-.carousel-caption1{
+.carousel-caption1 {
   text-align: left;
   margin: 0 auto;
-display: inline-block;
+  display: inline-block;
   background: url('images/assets/slider_title.png') 0 0 no-repeat;
   width: 300px;
   height: 64px;
@@ -933,12 +937,12 @@ display: inline-block;
   overflow: hidden;
 }
 
-.product-inner{
-margin: 0 auto;
+.product-inner {
+  margin: 0 auto;
 }
 
 /*view-more btn*/
-.view-more{
+.view-more {
   display: inline-block;
   background: url('images/assets/view-more_button.png') 0 0 no-repeat;
   width: 150px;
@@ -949,7 +953,7 @@ margin: 0 auto;
   overflow: hidden;
 }
 
-.view-more:hover{
+.view-more:hover {
   display: inline-block;
   background: url('images/assets/button_close.png') 0 0 no-repeat;
   transition: ease-in-out 0.5s;
@@ -964,3 +968,4 @@ margin: 0 auto;
   -ms-transition: ease-in-out 0.5s;
   -o-transition: ease-in-out 0.5s;
 }
+

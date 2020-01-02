@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>精選商品</title>
+	<title>最新消息</title>
 	<link rel="Shortcut Icon" type="image/x-icon" href="images/assets/logo.png" />
 	<!-- css-->
 	<link rel="stylesheet" type="text/css" href="index.css" />
@@ -24,7 +24,9 @@
 </head>
 
 <body>
-	<div id='loading'><h3>正在載入頁面資料...</h3></div>
+	<div id='loading'>
+		<h3>正在載入頁面資料...</h3>
+	</div>
 	<!--nav-->
 	<nav class="sina-nav mobile-sidebar navbar-fixed py-4" data-top="0">
 		<div class="container">
@@ -51,28 +53,27 @@
 			<div class="collapse navbar-collapse" id="navbar-menu">
 				<ul class="sina-menu" data-in="fadeInLeft" data-out="fadeInOut">
 					<li class="scroll"><a href="index.html"><img class="title_arrow"
-						src="images/assets/title_arrow.png">HOME</a></li>
+								src="images/assets/title_arrow.png">HOME</a></li>
 					<li class="active scroll"><a href="about.html"><img class="title_arrow"
-						src="images/assets/title_arrow.png">ABOUT</a></li>
+								src="images/assets/title_arrow.png">ABOUT</a></li>
 					<li class="active scroll"><a href="news.html"><img class="title_arrow"
-						src="images/assets/title_arrow.png">NEWS</a></li>
+								src="images/assets/title_arrow.png">NEWS</a></li>
 					<li class="scroll"><a href="product.html"><img class="title_arrow"
-						src="images/assets/title_arrow.png">PRODUCTS</a></li>
+								src="images/assets/title_arrow.png">PRODUCTS</a></li>
 					<li class="scroll"><a href="my account.html"><img class="title_arrow"
-						src="images/assets/title_arrow.png">MY ACCOUNT</a></li>
+								src="images/assets/title_arrow.png">MY ACCOUNT</a></li>
 				</ul>
 			</div><!-- /.navbar-collapse -->
 		</div><!-- .container -->
 	</nav>
 
 	<div class="container">
-		<div id="startchange"></div>
 		<div class="row">
 			<div class="col-12 col-lg-12">
+
 				<!--banner-->
 				<div id="banner">
 					<div id="carouselExampleIndicators" class="carousel slide carousel-fade caption-animate ">
-
 						<div class="carousel-inner">
 							<div class="carousel-item item active ">
 								<img class="d-block w-100 " src="images/assets/banner.jpg" alt="banner"
@@ -81,29 +82,24 @@
 									<h3>最新消息</h3>
 								</div>
 							</div>
-
 						</div>
-
 					</div>
 				</div>
+
 				<!--news-->
 				<div class="section" id="section1">
 					<div class="aboutWrap">
-						<div class="section-title1"data-aos="fade-down" data-aos-delay="200">
-
+						<div class="section-title1" data-aos="fade-down" data-aos-delay="200">
 							<h1 class="latest_news">最新消息</h1>
-
 						</div>
-
-
 					</div>
 				</div>
+
 				<!--nav's color ctrl-->
 				<div id="startchange"></div>
 
 				<!-- newss list-->
 				<main class="sortable">
-
 					<div class="wrapper">
 						<div class="nav-inner ">
 							<ul class="sortable__nav " data-aos="fade-down" data-delay="400">
@@ -114,7 +110,7 @@
 								</li>
 								<li>
 									<a data-sjslink="notice" class="nav__link">
-									公告
+										公告
 									</a>
 								</li>
 								<li>
@@ -122,65 +118,63 @@
 										新上架
 									</a>
 								</li>
-							
+
 							</ul>
 						</div>
 						<div id="sortable" class="sjs-default">
 							<div data-sjsel="notice">
 								<a href="#" class="list-group-item list-group-item-action " data-aos="fade-up"
-								data-aos-delay="600">
-								<div class="newsWrap">
-									<h1 class="news-date">date</h1>
-									<p class="news-text">content</p>
-								</div>
-								<span id="one" class="img"></span>
+									data-aos-delay="600">
+									<div class="newsWrap">
+										<h1 class="news-date">date</h1>
+										<p class="news-text">content</p>
+									</div>
+									<span id="one" class="img"></span>
 
-							</a>
+								</a>
 							</div>
+
 							<div data-sjsel="notice">
 								<a href="#" class="list-group-item list-group-item-action " data-aos="fade-up"
-								data-aos-delay="600">
-								<div class="newsWrap">
-									<h1 class="news-date">date</h1>
-									<p class="news-text">content</p>
-								</div>
-								<span id="one" class="img"></span>
-
-							</a>
+									data-aos-delay="600">
+									<div class="newsWrap">
+										<h1 class="news-date">date</h1>
+										<p class="news-text">content</p>
+									</div>
+									<span id="one" class="img"></span>
+								</a>
 							</div>
-							
+
 							<div data-sjsel="on">
 								<a href="#" class="list-group-item list-group-item-action " data-aos="fade-up"
-								data-aos-delay="600">
-								<div class="newsWrap">
-									<h1 class="news-date">date</h1>
-									<p class="news-text">content</p>
-								</div>
-								<span id="one" class="img"></span>
-
-							</a>
-<!--notice-->
+									data-aos-delay="600">
+									<div class="newsWrap">
+										<h1 class="news-date">date</h1>
+										<p class="news-text">content</p>
+									</div>
+									<span id="one" class="img"></span>
+								</a>
+								<!--notice-->
 							</div>
 						</div>
 					</div>
+
 					<!-- go to page-top -->
 					<button onclick="topFunction()" id="go-top_button" title="Go to top"
 						style="width:80px;height:91px;background-image:url('images/assets/go-top_button.png');"></button>
 			</div>
 			</main>
+
 			<!--sortable.js-->
 			<script type="text/javascript">
 				document.querySelector('#sortable').sortablejs()
 			</script>
-
 		</div>
-
+	</div>
+	</div>
 	</div>
 	</div>
 
-	</div>
-
-	</div>
 	<!-- Footer -->
 	<div id="page-content">
 		<footer id="sticky-footer" class="py-3  text-white-50" style="background-color: #8E354A;">
@@ -189,12 +183,14 @@
 			</div>
 		</footer>
 	</div>
+
 	<!--page-loading js -->
 	<script>
 		$(window).load(function () {
 			$('#loading').hide(0);
 		});
 	</script>
+
 	<!--go to top js-->
 	<script>
 		mybutton = document.getElementById("go-top_button");
@@ -215,6 +211,7 @@
 			document.documentElement.scrollTop = 0;
 		}
 	</script>
+
 	<!--AOS ani.js-->
 	<script>
 		AOS.init({
@@ -223,11 +220,13 @@
 
 		});
 	</script>
+
 	<!-- nav js -->
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/sina-nav.js"></script>
+
 	<!-- nav scroll js -->
 	<script>
 		$(document).ready(function () {

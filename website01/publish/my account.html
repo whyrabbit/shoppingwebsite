@@ -22,6 +22,7 @@
 <body>
 
 	<div class="wrapper">
+
 		<!--nav-->
 		<nav class="sina-nav mobile-sidebar navbar-fixed py-4" data-top="0">
 			<div class="container">
@@ -48,24 +49,24 @@
 				<div class="collapse navbar-collapse" id="navbar-menu">
 					<ul class="sina-menu" data-in="fadeInLeft" data-out="fadeInOut">
 						<li class="scroll"><a href="index.html"><img class="title_arrow"
-							src="images/assets/title_arrow.png">HOME</a></li>
+									src="images/assets/title_arrow.png">HOME</a></li>
 						<li class="active scroll"><a href="about.html"><img class="title_arrow"
-							src="images/assets/title_arrow.png">ABOUT</a></li>
+									src="images/assets/title_arrow.png">ABOUT</a></li>
 						<li class="active scroll"><a href="news.html"><img class="title_arrow"
-							src="images/assets/title_arrow.png">NEWS</a></li>
+									src="images/assets/title_arrow.png">NEWS</a></li>
 						<li class="scroll"><a href="product.html"><img class="title_arrow"
-							src="images/assets/title_arrow.png">PRODUCTS</a></li>
+									src="images/assets/title_arrow.png">PRODUCTS</a></li>
 						<li class="scroll"><a href="my account.html"><img class="title_arrow"
-							src="images/assets/title_arrow.png">MY ACCOUNT</a></li>
+									src="images/assets/title_arrow.png">MY ACCOUNT</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
-			</div><!-- .container -->
+			</div>
 		</nav>
-
+		<!-- .container -->
 		<div class="container">
-
 			<div class="row">
 				<div class="col-12 col-lg-12">
+
 					<!--banner-->
 					<div id="banner">
 						<div id="carouselExampleIndicators" class="carousel slide carousel-fade caption-animate ">
@@ -83,20 +84,19 @@
 
 						</div>
 					</div>
+
 					<!--nav's color ctrl-->
 					<div id="startchange"></div>
-					<!--my account-->
+
 					<!-- sign-up -->
 					<div class="section" id="section1">
 						<div class="myaccountWrap">
-							<div class="section-title6 "data-aos="fade-down" data-aos-delay="200">
-
+							<div class="section-title6 " data-aos="fade-down" data-aos-delay="200">
 								<h1 class="sign-up">我的帳號</h1>
-
 							</div>
 
-
-							<form action="/regist" method="POST"data-aos="fade-up" data-aos-delay="400">
+							<!--sign-up form-->
+							<form action="/regist" method="POST" data-aos="fade-up" data-aos-delay="400">
 								<div class="form-group row ">
 									<label for="inputEmail3" class="col-sm-2 col-form-label">用戶名：</label>
 									<div class="col-sm-10">
@@ -105,6 +105,7 @@
 									</div>
 
 								</div>
+
 								<div class="form-group row">
 									<label for="inputEmail3" class="col-sm-2 col-form-label">Email：</label>
 									<div class="col-sm-10">
@@ -120,6 +121,7 @@
 											name="password">
 									</div>
 								</div>
+
 								<div class="form-group row">
 									<label for="inputPassword3" class="col-sm-2 col-form-label">確認密碼：</label>
 									<div class="col-sm-10">
@@ -128,64 +130,57 @@
 									</div>
 								</div>
 
-
 								<div class="form-group row">
 									<div class="col-sm-12">
-										<button type="submit" class="btn btn-primary" id="regist" style="width:150px;height:150px;background-image:url('images/assets/submit_button.png');"></button>
+										<button type="submit" class="btn btn-primary" id="regist"
+											style="width:150px;height:150px;background-image:url('images/assets/submit_button.png');"></button>
 									</div>
 
 								</div>
 							</form>
 						</div>
 					</div>
-<!-- log-in -->
-<div class="section" id="section1">
-	<div class="myaccountWrap">
-		<div class="section-title7 "data-aos="fade-down" data-aos-delay="200">
 
-			<h1 class="log-in">我的帳號</h1>
+					<!-- log-in-->
+					<div class="section" id="section1">
+						<div class="myaccountWrap">
+							<div class="section-title7 " data-aos="fade-down" data-aos-delay="200">
+								<h1 class="log-in">我的帳號</h1>
+							</div>
 
-		</div>
+							<!-- log-in form -->
+							<form action="/login" method="GET" data-aos="fade-up" data-aos-delay="400">
+								<div class="form-group row ">
+									<label for="inputEmail3" class="col-sm-2 col-form-label">用戶名：</label>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" id="loginName" placeholder="用戶名"
+											name="UserName">
+									</div>
 
+								</div>
 
-		<form action="/login" method="GET"data-aos="fade-up" data-aos-delay="400">
-			<div class="form-group row ">
-				<label for="inputEmail3" class="col-sm-2 col-form-label">用戶名：</label>
-				<div class="col-sm-10">
-					<input type="text" class="form-control" id="loginName" placeholder="用戶名"
-						name="UserName">
+								<div class="form-group row">
+									<label for="inputPassword3" class="col-sm-2 col-form-label">密碼：</label>
+									<div class="col-sm-10">
+										<input type="password" class="form-control" id="loginPassword" placeholder="密碼"
+											name="password">
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<div class="col-sm-12">
+										<button type="submit" class="btn btn-primary" id="login"
+											style="width:150px;height:150px;background-image:url('images/assets/log-in_button.png');"></button>
+									</div>
+
+								</div>
+							</form>
+						</div>
+					</div>
 				</div>
-
-			</div>
-
-			<div class="form-group row">
-				<label for="inputPassword3" class="col-sm-2 col-form-label">密碼：</label>
-				<div class="col-sm-10">
-					<input type="password" class="form-control" id="loginPassword" placeholder="密碼"
-						name="password">
-				</div>
-			</div>
-	
-
-
-			<div class="form-group row">
-				<div class="col-sm-12">
-					<button type="submit" class="btn btn-primary" id="login" style="width:150px;height:150px;background-image:url('images/assets/log-in_button.png');"></button>
-				</div>
-
-			</div>
-		</form>
-	</div>
-</div>
-
-
-
-
-
-				</div>
-
 			</div>
 		</div>
+
 		<!-- go to page-top -->
 		<button onclick="topFunction()" id="go-top_button" title="Go to top"
 			style="width:80px;height:91px;background-image:url('images/assets/go-top_button.png');"></button>
@@ -200,8 +195,8 @@
 		</div>
 
 	</div>
-	<!--帳號密碼-->
 
+	<!--帳號密碼-->
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script>
 		$(function () {
@@ -249,23 +244,23 @@
 					}
 
 				} else {
-				/*	$.ajax({
-						
-						url: '/regist',
-						data: {
-							Email: $signupEmail.val(),	
-						},
-						dataType: 'json',
-						type: 'get',
-						success: function (registdata) {
-							return alert(registdata.check);
-						},
-						error: function (registdata) {
-							return alert("此信箱已註冊!");
-						}
-					})
-					return false;*/
-					
+					/*	$.ajax({
+							
+							url: '/regist',
+							data: {
+								Email: $signupEmail.val(),	
+							},
+							dataType: 'json',
+							type: 'get',
+							success: function (registdata) {
+								return alert(registdata.check);
+							},
+							error: function (registdata) {
+								return alert("此信箱已註冊!");
+							}
+						})
+						return false;*/
+
 					return alert("註冊成功!");
 					return false;
 				};
@@ -273,10 +268,6 @@
 			})
 		})
 	</script>
-
-
-
-
 
 	<script>
 		$('#source').quicksand($('#destination li'), {
@@ -330,14 +321,6 @@
 			easing: 'ease-in',
 
 
-
-		});
-	</script>
-	<!--AOS ani-->
-	<script>
-		AOS.init({
-
-			easing: 'ease-in',
 
 		});
 	</script>

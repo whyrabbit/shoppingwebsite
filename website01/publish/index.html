@@ -80,26 +80,26 @@
 			});
 		});
 	</script>
-<!--fb's window in the middle-->
-<script>
-	var win = null;
-	function newWindow(mypage,myname,w,h,features) {
-	  var winl = (screen.width-w)/2;
-	  var wint = (screen.height-h)/2;
-	  if (winl < 0) winl = 0;
-	  if (wint < 0) wint = 0;
-	  var settings = 'height=' + h + ',';
-	  settings += 'width=' + w + ',';
-	  settings += 'top=' + wint + ',';
-	  settings += 'left=' + winl + ',';
-	  settings += features;
-	  win = window.open(mypage,myname,settings);
-	  win.window.focus();
-	}
-</script>
-	
-</head>
 
+	<!--fb's window in the middle-->
+	<script>
+		var win = null;
+
+		function newWindow(mypage, myname, w, h, features) {
+			var winl = (screen.width - w) / 2;
+			var wint = (screen.height - h) / 2;
+			if (winl < 0) winl = 0;
+			if (wint < 0) wint = 0;
+			var settings = 'height=' + h + ',';
+			settings += 'width=' + w + ',';
+			settings += 'top=' + wint + ',';
+			settings += 'left=' + winl + ',';
+			settings += features;
+			win = window.open(mypage, myname, settings);
+			win.window.focus();
+		}
+	</script>
+</head>
 
 <body>
 
@@ -107,6 +107,7 @@
 	<div id='loading'>
 		<h3>正在載入頁面資料...</h3>
 	</div>
+
 	<!--nav-->
 	<nav class="sina-nav mobile-sidebar navbar-fixed py-4" data-top="0">
 		<div class="container">
@@ -146,14 +147,17 @@
 
 				</ul>
 			</div><!-- /.navbar-collapse -->
-		</div><!-- .container -->
+		</div>
 	</nav>
 
+	<!-- .container -->
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-lg-12">
+
 				<!--nav's color ctrl-->
 				<div id="startchange"></div>
+				<!--slider-->
 				<div id="slider">
 					<div id="carouselExampleIndicators" class="carousel slide carousel-fade caption-animate ">
 						<ol class="carousel-indicators">
@@ -193,17 +197,15 @@
 						</a>
 					</div>
 				</div>
+
 				<!-- news -->
 				<div class="section" id="section1">
 					<div class="newsWrap">
-						<div class="section-title1"data-aos="fade-down" data-aos-delay="200">
+						<div class="section-title1" data-aos="fade-down" data-aos-delay="200">
 
 							<h1 class="latest_news">最新消息</h1>
 
 						</div>
-
-
-
 						<div class="list-group">
 							<a href="#" class="list-group-item list-group-item-action " data-aos="fade-up"
 								data-aos-delay="200">
@@ -233,18 +235,18 @@
 
 							</a>
 						</div>
+
 						<!--view-more btn-->
-						<div class="view-more-title"data-aos="fade-down" data-aos-delay="800">
+						<div class="view-more-title" data-aos="fade-right" data-aos-delay="800">
 							<a class="view-more" href="news.html">看更多</a>
 						</div>
 					</div>
 				</div>
 
 				<!-- products -->
-
 				<div class="section" id="section2">
 					<div class="newsWrap">
-						<div class="section-title2"data-aos="fade-down" data-aos-delay="200">
+						<div class="section-title2" data-aos="fade-down" data-aos-delay="200">
 
 							<h1 class="products">精選商品</h1>
 
@@ -310,8 +312,9 @@
 									</a></div>
 							</div>
 						</div>
+
 						<!--view-more btn-->
-						<div class="view-more-title"data-aos="fade-up" data-aos-delay="600">
+						<div class="view-more-title" data-aos="fade-right" data-aos-delay="600">
 							<a class="view-more" href="product.html">看更多</a>
 						</div>
 
@@ -321,15 +324,15 @@
 				<!-- sns -->
 				<div class="section" id="section3">
 					<div class="newsWrap">
-						<div class="section-title8"data-aos="fade-down" data-aos-delay="200">
+						<div class="section-title8" data-aos="fade-down" data-aos-delay="200">
 
 							<h1 class="sns">facebook</h1>
 
 						</div>
-
 						<div class="product-group1 row">
 							<div class="product-inner col-sm-6" data-aos="fade-up" data-aos-delay="200">
-								<div class=" col-sm-12 product-thumb"><a href="#null" onClick="newWindow('https://www.facebook.com/%E8%B5%A4%E9%BD%8B%E5%A0%82%E5%92%8C%E9%A2%A8%E5%8F%A4%E8%91%97-211096366247120/','','500','500','resizable,scrollbars,status,toolbar')">
+								<div class=" col-sm-12 product-thumb"><a href="#null"
+										onClick="newWindow('https://www.facebook.com/%E8%B5%A4%E9%BD%8B%E5%A0%82%E5%92%8C%E9%A2%A8%E5%8F%A4%E8%91%97-211096366247120/','','500','500','resizable,scrollbars,status,toolbar')">
 										<figure class="c4-izmir c4-border-cc-3  c4-gradient-top-left"
 											style="background-image:url('images/assets/card_hover.png');background-repeat:no-repeat;background-color:#9E7A7A;background-size:cover">
 											<img src="images/assets/fb.png" alt="black.JPG">
@@ -342,27 +345,16 @@
 										</figure>
 									</a></div>
 							</div>
-
-
 						</div>
 					</div>
-
-
 				</div>
-		
-			<!-- go to page-top -->
-			<button onclick="topFunction()" id="go-top_button" title="Go to top"
-				style="width:80px;height:91px;background-image:url('images/assets/go-top_button.png');"></button>
+
+				<!-- go to page-top -->
+				<button onclick="topFunction()" id="go-top_button" title="Go to top"
+					style="width:80px;height:91px;background-image:url('images/assets/go-top_button.png');"></button>
+			</div>
 		</div>
-
-
-
 	</div>
-
-
-	</div>
-
-
 	</div>
 
 	<!-- Footer -->
@@ -380,6 +372,7 @@
 			$('#loading').hide(0);
 		});
 	</script>
+
 	<!--go to top js-->
 	<script>
 		mybutton = document.getElementById("go-top_button");
@@ -417,6 +410,7 @@
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/sina-nav.js"></script>
+
 	<!-- nav scroll js -->
 	<script>
 		$(document).ready(function () {

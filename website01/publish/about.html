@@ -20,6 +20,7 @@
 </head>
 
 <body>
+
 	<!--page-loading-->
 	<div id='loading'>
 		<h3>正在載入頁面資料...</h3>
@@ -51,24 +52,25 @@
 			<div class="collapse navbar-collapse" id="navbar-menu">
 				<ul class="sina-menu" data-in="fadeInLeft" data-out="fadeInOut">
 					<li class="scroll"><a href="index.html"><img class="title_arrow"
-						src="images/assets/title_arrow.png">HOME</a></li>
+								src="images/assets/title_arrow.png">HOME</a></li>
 					<li class="active scroll"><a href="about.html"><img class="title_arrow"
-						src="images/assets/title_arrow.png">ABOUT</a></li>
+								src="images/assets/title_arrow.png">ABOUT</a></li>
 					<li class="active scroll"><a href="news.html"><img class="title_arrow"
-						src="images/assets/title_arrow.png">NEWS</a></li>
+								src="images/assets/title_arrow.png">NEWS</a></li>
 					<li class="scroll"><a href="product.html"><img class="title_arrow"
-						src="images/assets/title_arrow.png">PRODUCTS</a></li>
+								src="images/assets/title_arrow.png">PRODUCTS</a></li>
 					<li class="scroll"><a href="my account.html"><img class="title_arrow"
-						src="images/assets/title_arrow.png">MY ACCOUNT</a></li>
+								src="images/assets/title_arrow.png">MY ACCOUNT</a></li>
 				</ul>
 			</div><!-- /.navbar-collapse -->
-		</div><!-- .container -->
+		</div>
 	</nav>
 
+	<!-- .container -->
 	<div class="container">
-		
 		<div class="row">
 			<div class="col-12 col-lg-12">
+
 				<!--banner-->
 				<div id="banner">
 					<div id="carouselExampleIndicators" class="carousel slide carousel-fade caption-animate ">
@@ -86,25 +88,29 @@
 
 					</div>
 				</div>
+
 				<!--nav's color ctrl-->
 				<div id="startchange"></div>
+
 				<!--about-->
 				<div class="section" id="section1">
 					<div class="aboutWrap">
-						<div class="section-title3"data-aos="fade-down" data-aos-delay="200">
+						<div class="section-title3" data-aos="fade-down" data-aos-delay="200">
 
 							<h1 class="about">店鋪介紹</h1>
 
 						</div>
 						<div class="intro" data-aos="fade-up" data-aos-delay="400">
-							<h2><p>赤齋堂＊古著道行羽織</p></h2>
+							<h2>
+								<p>赤齋堂＊古著道行羽織</p>
+							</h2>
 							<h4>
-							<p>1.日本帶回骨董和服羽織道行，各款僅有一件。</p><br>
-							<p>商品如未特別標註，皆為古著二手全新品，都有檢查及整理。</p><br>
-							<p>3.部分會有骨董痕跡可能會有些瑕疵、泛黃但均不影響穿著，外觀特別嚴重之瑕疵都會註明。</p><br>
-							<p>4.部分商品袖口口袋固定白線未拆為正常現象，是全新的證明。</p><br>
-							<p>5.售出一律不接受退換介意者請勿拍。</p>
-						</h4>
+								<p>1.日本帶回骨董和服羽織道行，各款僅有一件。</p><br>
+								<p>2.商品如未特別標註，皆為古著二手全新品，都有檢查及整理。</p><br>
+								<p>3.部分會有骨董痕跡可能會有些瑕疵、泛黃但均不影響穿著，外觀特別嚴重之瑕疵都會註明。</p><br>
+								<p>4.部分商品袖口口袋固定白線未拆為正常現象，是全新的證明。</p><br>
+								<p>5.售出一律不接受退換介意者請勿拍。</p>
+							</h4>
 						</div>
 
 					</div>
@@ -113,7 +119,7 @@
 				<!-- contact -->
 				<div class="section" id="section2">
 					<div class="contactWrap">
-						<div class="section-title4"data-aos="fade-down" data-aos-delay="200">
+						<div class="section-title4" data-aos="fade-down" data-aos-delay="200">
 
 							<h1 class="contact">與我聯絡</h1>
 
@@ -168,23 +174,14 @@
 
 					</div>
 				</div>
-
-
-
-
 			</div>
+
 			<!-- go to page-top -->
 			<button onclick="topFunction()" id="go-top_button" title="Go to top"
 				style="width:80px;height:91px;background-image:url('images/assets/go-top_button.png');"></button>
-
 		</div>
-
 	</div>
-
 	</div>
-
-
-
 
 	<!-- Footer -->
 	<div id="page-content">
@@ -194,7 +191,7 @@
 			</div>
 		</footer>
 	</div>
-	
+
 	<script>
 		$('#source').quicksand($('#destination li'), {
 			name: value
@@ -213,12 +210,14 @@
 			}
 		});
 	</script>
+
 	<!--page-loading js -->
 	<script>
 		$(window).load(function () {
 			$('#loading').hide(0);
 		});
 	</script>
+
 	<!--go to top js-->
 	<script>
 		mybutton = document.getElementById("go-top_button");
@@ -239,25 +238,28 @@
 			document.documentElement.scrollTop = 0;
 		}
 	</script>
-    <!--訊息不能填入空白-->
 
+	<!--訊息不能填入空白-->
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script>
 		$(function () {
 			const $AboutUserName = $("#AboutUserName");
 			const $AboutUserPassword = $("#AboutUserPassword");
-            const $AboutUserEmail = $("#AboutUserPassword");
+			const $AboutUserEmail = $("#AboutUserPassword");
 			const $AboutUserComment = $("#AboutUserComment");
 			const $AboutUserTelephone = $("#AboutUserTelephone");
 
 
 			$("#AboutSubmit").click(function () {
-				if ($AboutUserName.val().length == 0 || $AboutUserPassword.val().length == 0 || $AboutUserEmail.val().length == 0 || $AboutUserComment.val().length == 0 || $AboutUserTelephone.val().length == 0) {
+				if ($AboutUserName.val().length == 0 || $AboutUserPassword.val().length == 0 ||
+					$AboutUserEmail.val().length == 0 || $AboutUserComment.val().length == 0 ||
+					$AboutUserTelephone.val().length == 0) {
 					return alert("請輸入內容!");
-				} 
+				}
 			})
 		})
 	</script>
+
 	<!--AOS ani-->
 	<script>
 		AOS.init({
@@ -265,14 +267,6 @@
 			easing: 'ease-in',
 
 
-
-		});
-	</script>
-	<!--AOS ani-->
-	<script>
-		AOS.init({
-
-			easing: 'ease-in',
 
 		});
 	</script>
@@ -282,6 +276,7 @@
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/sina-nav.js"></script>
+
 	<!-- nav scroll js -->
 	<script>
 		$(document).ready(function () {
