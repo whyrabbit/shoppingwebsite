@@ -62,6 +62,7 @@
 				</div><!-- /.navbar-collapse -->
 			</div>
 		</nav>
+
 		<!-- .container -->
 		<div class="container">
 			<div class="row">
@@ -75,7 +76,7 @@
 								<div class="carousel-item item active ">
 									<img class="d-block w-100 " src="images/assets/banner.jpg" alt="banner"
 										data-aos="fade-right" data-aos-delay="100">
-									<div class=" news_banner_title" data-aos="fade-down" data-aos-delay="400">
+									<div class="myaccount_banner_title" data-aos="fade-down" data-aos-delay="400">
 										<h3>我的帳號</h3>
 									</div>
 								</div>
@@ -88,11 +89,52 @@
 					<!--nav's color ctrl-->
 					<div id="startchange"></div>
 
-					<!-- sign-up -->
+					<!-- log-in-->
 					<div class="section" id="section1">
 						<div class="myaccountWrap">
+							<div class="section-title7 " data-aos="fade-down" data-aos-delay="200">
+								<h1 class="log-in">登入</h1>
+							</div>
+
+							<!-- log-in form -->
+							<form action="/login" method="GET" data-aos="fade-up" data-aos-delay="400">
+								<div class="form-group row ">
+									<label for="inputEmail3" class="col-sm-2 col-form-label">用戶名：</label>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" id="loginName" placeholder="用戶名"
+											name="UserName">
+									</div>
+
+								</div>
+
+								<div class="form-group row">
+									<label for="inputPassword3" class="col-sm-2 col-form-label">密碼：</label>
+									<div class="col-sm-10">
+										<input type="password" class="form-control" id="loginPassword" placeholder="密碼"
+											name="password">
+									</div>
+								</div>
+
+								<div class="form-group row">
+									<div class="col-sm-12">
+										<button type="submit" class="btn btn-primary" id="login"
+											style="width:150px;height:150px;background-image:url('images/assets/log-in_button.png');"></button>
+
+										<!--go to submit btn-->
+										<div class="btn btn-primary submit-slide" 
+											style="width:150px;height:150px;background-image:url('images/assets/log-in_button.png');"></div>
+									</div>
+
+								</div>
+							</form>
+						</div>
+					</div><!--log-in end-->
+
+					<!-- sign-up -->
+					<div class="section" id="section2" style="display: none">
+						<div class="myaccountWrap">
 							<div class="section-title6 " data-aos="fade-down" data-aos-delay="200">
-								<h1 class="sign-up">我的帳號</h1>
+								<h1 class="sign-up">註冊</h1>
 							</div>
 
 							<!--sign-up form-->
@@ -134,49 +176,18 @@
 									<div class="col-sm-12">
 										<button type="submit" class="btn btn-primary" id="regist"
 											style="width:150px;height:150px;background-image:url('images/assets/submit_button.png');"></button>
+
+											<!--back to login btn-->
+										<div class="btn btn-primary submit-slide" 
+										style="width:150px;height:150px;background-image:url('images/assets/log-in_button.png');"></div>
 									</div>
 
 								</div>
 							</form>
 						</div>
 					</div>
+					<!--sign-up end-->
 
-					<!-- log-in-->
-					<div class="section" id="section1">
-						<div class="myaccountWrap">
-							<div class="section-title7 " data-aos="fade-down" data-aos-delay="200">
-								<h1 class="log-in">我的帳號</h1>
-							</div>
-
-							<!-- log-in form -->
-							<form action="/login" method="GET" data-aos="fade-up" data-aos-delay="400">
-								<div class="form-group row ">
-									<label for="inputEmail3" class="col-sm-2 col-form-label">用戶名：</label>
-									<div class="col-sm-10">
-										<input type="text" class="form-control" id="loginName" placeholder="用戶名"
-											name="UserName">
-									</div>
-
-								</div>
-
-								<div class="form-group row">
-									<label for="inputPassword3" class="col-sm-2 col-form-label">密碼：</label>
-									<div class="col-sm-10">
-										<input type="password" class="form-control" id="loginPassword" placeholder="密碼"
-											name="password">
-									</div>
-								</div>
-
-								<div class="form-group row">
-									<div class="col-sm-12">
-										<button type="submit" class="btn btn-primary" id="login"
-											style="width:150px;height:150px;background-image:url('images/assets/log-in_button.png');"></button>
-									</div>
-
-								</div>
-							</form>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -264,7 +275,6 @@
 					return alert("註冊成功!");
 					return false;
 				};
-
 			})
 		})
 	</script>
@@ -287,12 +297,24 @@
 			}
 		});
 	</script>
+
+	<!--submit-slide js-->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(".submit-slide").click(function () {
+				$("#section2").slideToggle("slow");
+				$("#section1").slideToggle("slow");
+			});
+		});
+	</script>
+
 	<!--page-loading js -->
 	<script>
 		$(window).load(function () {
 			$('#loading').hide(0);
 		});
 	</script>
+	
 	<!--go to top js-->
 	<script>
 		mybutton = document.getElementById("go-top_button");
