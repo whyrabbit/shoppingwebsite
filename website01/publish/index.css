@@ -939,6 +939,7 @@ label {
 
 .product-inner {
   margin: 0 auto;
+  
 }
 
 /*view-more btn*/
@@ -972,8 +973,6 @@ label {
 .bgWrap{
 background: url('images/assets/frame.png') 0 0 no-repeat; 
 background-size: contain;
-
-
 }
 
 .about-contents{
@@ -986,7 +985,5 @@ background-size: contain;
   line-height: 0;
   text-indent: -5000px;
   overflow: hidden;
-
-
 }
 
