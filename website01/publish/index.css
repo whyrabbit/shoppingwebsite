@@ -582,7 +582,18 @@ body {
   overflow: hidden;
 
 }
+.section-title9,
+.user-info {
+  display: inline-block;
+  background: url('images/assets/user-info_title.png') 0 0 no-repeat;
+  width: 300px;
+  height: 300px;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -5000px;
+  overflow: hidden;
 
+}
 /*slider,banner*/
 #slider,
 #banner {
@@ -638,7 +649,7 @@ body {
 
 .nav__link {
   padding: 0 20px 4px;
-  color: #fff;
+  color: #8E354A;
   font-size: 1.4rem;
   font-weight: 300;
   display: block;
