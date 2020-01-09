@@ -121,14 +121,16 @@
 											style="width:150px;height:150px;background-image:url('images/assets/log-in_button.png');"></button>
 
 										<!--go to submit btn-->
-										<div class="btn btn-primary submit-slide" 
-											style="width:150px;height:150px;background-image:url('images/assets/log-in_button.png');"></div>
+										<div class="btn btn-primary submit-slide"
+											style="width:150px;height:150px;background-image:url('images/assets/log-in_button.png');">
+										</div>
 									</div>
 
 								</div>
 							</form>
 						</div>
-					</div><!--log-in end-->
+					</div>
+					<!--log-in end-->
 
 					<!-- sign-up -->
 					<div class="section" id="section2" style="display: none">
@@ -177,9 +179,10 @@
 										<button type="submit" class="btn btn-primary" id="regist"
 											style="width:150px;height:150px;background-image:url('images/assets/submit_button.png');"></button>
 
-											<!--back to login btn-->
-										<div class="btn btn-primary submit-slide" 
-										style="width:150px;height:150px;background-image:url('images/assets/log-in_button.png');"></div>
+										<!--back to login btn-->
+										<div class="btn btn-primary submit-slide"
+											style="width:150px;height:150px;background-image:url('images/assets/log-in_button.png');">
+										</div>
 									</div>
 
 								</div>
@@ -193,14 +196,16 @@
 
 
 					<!-- user info -->
-					<div class="section" id="section3" style="">
+					<div class="section" id="section3" >
 						<div class="myaccountWrap">
 							<div class="section-title6 " data-aos="fade-down" data-aos-delay="200">
 								<h1 class="sign-up">我的帳戶</h1>
 							</div>
 
 							<!--user-info-->
-							<div>xxx</div>
+							<div id="SuccessUserName">
+
+							</div>
 						</div>
 					</div>
 					<!--user-info end-->
@@ -248,7 +253,9 @@
 						dataType: 'json',
 						type: 'get',
 						success: function (data) {
+							$('#SuccessUserName').text("歡迎," + $loginName.val())
 							return alert(data.check);
+
 						}
 					})
 					return false;
@@ -281,18 +288,26 @@
 							type: 'get',
 							success: function (registdata) {
 								return alert(registdata.check);
+								slideFunc();
 							},
 							error: function (registdata) {
 								return alert("此信箱已註冊!");
 							}
 						})
 						return false;*/
+						
+					 return alert("註冊成功!");
 
-					return alert("註冊成功!");
 					return false;
+
 				};
 			})
 		})
+
+		function slideFunc() {
+			$("#section2").slideToggle("slow");
+			$("#section1").slideToggle("slow");
+		}
 	</script>
 
 	<script>
@@ -330,7 +345,7 @@
 			$('#loading').hide(0);
 		});
 	</script>
-	
+
 	<!--go to top js-->
 	<script>
 		mybutton = document.getElementById("go-top_button");

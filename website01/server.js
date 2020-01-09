@@ -2,6 +2,7 @@ var express = require("express"); //目前最穩定、使用最廣泛開發框�
 var cookieParser = require('cookie-parser'); //可以用在登入上
 var bodyParser = require('body-parser');
 var server = express();
+var session = require("express-session");
 var urlencodedParser = bodyParser.urlencoded({ // 创建 application/x-www-form-urlencoded 编码解析
     //var Strategy = require('passport-local').Strategy;//登入註冊
     extended: false
@@ -22,7 +23,15 @@ var About = new DB({ //表單資料庫
     filename: 'About.db',
     autoload: true
 })
+server.use(session({
+    resave: true, // 新增
+    saveUninitialized: true, // 新增
+    secret: "abcdefgh",
+    cookie: {
+        maxAge: 1 * 24 * 60 * 60 * 1000
+    }
 
+}))
 server.get("/login", urlencodedParser, function (req, res) { //登入
 
     var message = {
@@ -40,7 +49,9 @@ server.get("/login", urlencodedParser, function (req, res) { //登入
             return;
             console.log("沒值");
         } else {
-        
+            req.session.regenerate(() => { // 這裡是刷新 session 物件
+                req.session.userdata = req.query; // 打錯東西
+            });
             message.check = "歡迎使用";
             res.send(message);
             console.log("有值");
@@ -50,9 +61,9 @@ server.get("/login", urlencodedParser, function (req, res) { //登入
 });
 
 server.post("/regist", urlencodedParser, function (req, res) { //註冊
-   /* var message1 = {
-        check: ""
-    } */
+    /* var message1 = {
+         check: ""
+     } */
     Users.findOne({
         "Email": req.body.UserEmail
     }, function (err, docs) { //查詢有沒有該值
@@ -66,12 +77,12 @@ server.post("/regist", urlencodedParser, function (req, res) { //註冊
                     password: req.body.password
                 };
                 Users.insert(user, function (err, newUser) {})
-               /* message1.check = "註冊成功";
-                res.send(message1);
-                return;*/
+                /* message1.check = "註冊成功";
+                 res.send(message1);
+                 return;*/
             };
         } else {
-           
+
             console.log("已註冊"); //有該值則已註冊
         }
     });
