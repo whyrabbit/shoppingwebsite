@@ -1,0 +1,307 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>店鋪介紹</title>
+	<link rel="Shortcut Icon" type="image/x-icon" href="images/assets/logo.png" />
+	<!-- css-->
+	<link rel="stylesheet" type="text/css" href="index.css" />
+	<!--scrollin' ani-->
+	<link rel="stylesheet" href="css/aos.css">
+	<script src="js/aos.js"></script>
+	<!--For nav Plugins css-->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery-2.0.2.min.js"></script>
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/sina-nav.css">
+</head>
+
+<body>
+
+	<!--page-loading-->
+	<div id='loading'>
+		<h3>正在載入頁面資料...</h3>
+	</div>
+
+	<!--nav-->
+	<nav class="sina-nav mobile-sidebar navbar-fixed py-4" data-top="0">
+		<div class="container">
+			<!--widh ctrl-->
+			<div class="extension-nav">
+				<ul>
+					<li><a href="shopping cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+					<li><a href="https://www.facebook.com/%E8%B5%A4%E9%BD%8B%E5%A0%82%E5%92%8C%E9%A2%A8%E5%8F%A4%E8%91%97-211096366247120/"
+							target="_blank"><i class="fa fa-facebook"></i></a></li>
+				</ul>
+			</div><!-- .extension-nav -->
+
+			<div class="sina-nav-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+					<i class="fa fa-bars"></i>
+				</button>
+				<a class="sina-brand social-on" href="index.html">
+					<img src="images/assets/logo_60px.png">
+
+				</a>
+			</div><!-- .sina-nav-header -->
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="navbar-menu">
+				<ul class="sina-menu" data-in="fadeInLeft" data-out="fadeInOut">
+					<li class="scroll"><a href="index.html"><img class="title_arrow"
+								src="images/assets/title_arrow.png">HOME</a></li>
+					<li class="active scroll"><a href="about.html"><img class="title_arrow"
+								src="images/assets/title_arrow.png">ABOUT</a></li>
+					<li class="active scroll"><a href="news.html"><img class="title_arrow"
+								src="images/assets/title_arrow.png">NEWS</a></li>
+					<li class="scroll"><a href="product.html"><img class="title_arrow"
+								src="images/assets/title_arrow.png">PRODUCTS</a></li>
+					<li class="scroll"><a href="my account.html"><img class="title_arrow"
+								src="images/assets/title_arrow.png">MY ACCOUNT</a></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div>
+	</nav>
+
+	<!-- .container -->
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-lg-12">
+
+				<!--banner-->
+				<div id="banner">
+					<div id="carouselExampleIndicators" class="carousel slide carousel-fade caption-animate ">
+
+						<div class="carousel-inner">
+							<div class="carousel-item item active ">
+								<img class="d-block w-100 " src="images/assets/banner.jpg" alt="banner"
+									data-aos="fade-right" data-aos-delay="100">
+								<div class=" about_banner_title" data-aos="fade-down" data-aos-delay="400">
+									<h3>關於</h3>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+
+				<!--nav's color ctrl-->
+				<div id="startchange"></div>
+
+				<!--about-->
+				<div class="section" id="section1">
+					<div class="bgWrap">
+						<div class="section-title3" data-aos="fade-down" data-aos-delay="200">
+
+							<h1 class="about">店鋪介紹</h1>
+
+						</div>
+						<div class="intro" data-aos="fade-up" data-aos-delay="400">
+							
+							<div class="about-contents">
+							
+							
+						</div>
+						</div>
+
+					</div>
+				</div>
+
+				<!-- contact -->
+				<div class="section" id="section2">
+					<div class="bgWrap">
+						<div class="section-title4" data-aos="fade-down" data-aos-delay="200">
+
+							<h1 class="contact">與我聯絡</h1>
+
+						</div>
+						<form data-aos="fade-up" data-aos-delay="400" action="about" method="POST">
+							<div class="form-group row">
+								<label for="inputEmail3" class="col-sm-2 col-form-label">用戶名：</label>
+								<div class="col-sm-10">
+									<input type="text" style="color: #f8d2bb; background-color: #8E354A;"
+										class="form-control" id="AboutUserName" name="UserName">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="inputEmail3" class="col-sm-2 col-form-label">Email：</label>
+								<div class="col-sm-10">
+									<input type="email" style="color: #f8d2bb; background-color: #8E354A;"
+										class="form-control" id="AboutUserEmail" name="UserEmail">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="inputEmail3" class="col-sm-2 col-form-label">電話：</label>
+								<div class="col-sm-10">
+									<input type="text" style="color: #f8d2bb; background-color: #8E354A;"
+										class="form-control" id="AboutUserTelephone" name="Telephone">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="inputPassword3" class="col-sm-2 col-form-label">密碼：</label>
+								<div class="col-sm-10">
+									<input type="password" style="color: #f8d2bb; background-color: #8E354A;"
+										class="form-control" id="AboutUserPassword" name="password">
+								</div>
+							</div>
+							<div class="form-group row">
+
+
+								<label for="comment" class="col-sm-2 col-form-label">訊息:</label>
+								<div class="col-sm-10">
+									<textarea class="form-control" style="color: #f8d2bb; background-color: #8E354A;"
+										rows="5" id="AboutUserComment" name="message"></textarea>
+								</div>
+							</div>
+
+
+							<div class="form-group row">
+								<div class="col-sm-12">
+									<button type="submit" class="btn btn-primary" id="AboutSubmit"
+										style="width:150px;height:150px;background-image:url('images/assets/submit_button.png');"></button>
+								</div>
+							</div>
+						</form>
+
+					</div>
+				</div>
+			</div>
+
+			<!-- go to page-top -->
+			<button onclick="topFunction()" id="go-top_button" title="Go to top"
+				style="width:80px;height:91px;background-image:url('images/assets/go-top_button.png');"></button>
+		</div>
+	</div>
+	</div>
+
+	<!-- Footer -->
+	<div id="page-content">
+		<footer id="sticky-footer" class="py-3  text-white-50" style="background-color: #8E354A;">
+			<div class="container text-center">
+				<small>Copyright &copy; 鐘樓貧民</small>
+			</div>
+		</footer>
+	</div>
+
+	<script>
+		$('#source').quicksand($('#destination li'), {
+			name: value
+		}, function () {
+			// callback code
+		});
+		$("#content").quicksand($("#data > li"), {
+			duration: 1000,
+		}, function () { // callback function
+			$('#content a').tooltip();
+		});
+		$("#content").quicksand($("#data > li"), {
+			duration: 1000,
+			enhancement: function () {
+				Cufon.refresh('#content span');
+			}
+		});
+	</script>
+
+	<!--page-loading js -->
+	<script>
+		$(window).load(function () {
+			$('#loading').hide(0);
+		});
+	</script>
+
+	<!--go to top js-->
+	<script>
+		mybutton = document.getElementById("go-top_button");
+		window.onscroll = function () {
+			scrollFunction()
+		};
+
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+		}
+
+		function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+	</script>
+
+	<!--訊息不能填入空白-->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+		$(function () {
+			const $AboutUserName = $("#AboutUserName");
+			const $AboutUserPassword = $("#AboutUserPassword");
+			const $AboutUserEmail = $("#AboutUserPassword");
+			const $AboutUserComment = $("#AboutUserComment");
+			const $AboutUserTelephone = $("#AboutUserTelephone");
+
+
+			$("#AboutSubmit").click(function () {
+				if ($AboutUserName.val().length == 0 || $AboutUserPassword.val().length == 0 ||
+					$AboutUserEmail.val().length == 0 || $AboutUserComment.val().length == 0 ||
+					$AboutUserTelephone.val().length == 0) {
+					return alert("請輸入內容!");
+				}
+			})
+		})
+	</script>
+
+	<!--AOS ani-->
+	<script>
+		AOS.init({
+
+			easing: 'ease-in',
+
+
+
+		});
+	</script>
+
+	<!-- nav js -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+	<script src="assets/js/sina-nav.js"></script>
+
+	<!-- nav scroll js -->
+	<script>
+		$(document).ready(function () {
+			var scroll_start = 0;
+			var startchange = $('#startchange');
+			var offset = startchange.offset();
+			if (startchange.length) {
+				$(document).scroll(function () {
+					scroll_start = $(this).scrollTop();
+					if (scroll_start > offset.top) {
+						$('.sina-nav').css('background-color', '#9E7A7A');
+						$('.sina-nav a').css('color', '#8E354A');
+					} else {
+						$('.sina-nav').css('background-color', '#8E354A');
+						$('.sina-nav a').css('color', '#9E7A7A');
+
+					}
+				});
+			}
+		});
+	</script>
+
+	<!-- For All Plug-in Activation & Others -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			// WOW animation initialize
+			new WOW().init();
+		});
+	</script>
+
+</body>
+
+</html>

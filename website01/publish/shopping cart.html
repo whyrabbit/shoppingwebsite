@@ -1,0 +1,414 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>購物車</title>
+	<link rel="Shortcut Icon" type="image/x-icon" href="images/assets/logo.png" />
+	<!-- Vue  css-->
+	<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+	<link rel="stylesheet" href="assets/css/style.css">
+	<!-- css-->
+	<link rel="stylesheet" type="text/css" href="index.css" />
+	<!--scrollin' ani-->
+	<link rel="stylesheet" href="css/aos.css">
+	<script src="js/aos.js"></script>
+	<!--For nav Plugins css-->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery-2.0.2.min.js"></script>
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/sina-nav.css">
+</head>
+
+<body>
+
+	<!--page-loading-->
+	<div id='loading'>
+		<h3>正在載入頁面資料...</h3>
+	</div>
+
+	<!--nav-->
+	<nav class="sina-nav mobile-sidebar navbar-fixed py-4" data-top="0">
+		<div class="container">
+			<!--widh ctrl-->
+			<div class="extension-nav">
+				<ul>
+					<li><a href="shopping cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+					<li><a href="https://www.facebook.com/%E8%B5%A4%E9%BD%8B%E5%A0%82%E5%92%8C%E9%A2%A8%E5%8F%A4%E8%91%97-211096366247120/"
+							target="_blank"><i class="fa fa-facebook"></i></a></li>
+				</ul>
+			</div><!-- .extension-nav -->
+
+			<div class="sina-nav-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+					<i class="fa fa-bars"></i>
+				</button>
+				<a class="sina-brand social-on" href="index.html">
+					<img src="images/assets/logo_60px.png">
+
+				</a>
+			</div><!-- .sina-nav-header -->
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="navbar-menu">
+				<ul class="sina-menu" data-in="fadeInLeft" data-out="fadeInOut">
+					<li class="scroll"><a href="index.html"><img class="title_arrow"
+								src="images/assets/title_arrow.png">HOME</a></li>
+					<li class="active scroll"><a href="about.html"><img class="title_arrow"
+								src="images/assets/title_arrow.png">ABOUT</a></li>
+					<li class="active scroll"><a href="news.html"><img class="title_arrow"
+								src="images/assets/title_arrow.png">NEWS</a></li>
+					<li class="scroll"><a href="product.html"><img class="title_arrow"
+								src="images/assets/title_arrow.png">PRODUCTS</a></li>
+					<li class="scroll"><a href="my account.html"><img class="title_arrow"
+								src="images/assets/title_arrow.png">MY ACCOUNT</a></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div>
+	</nav>
+
+	<!-- .container -->
+	<div class="container">
+		<div id="startchange"></div>
+		<div class="row">
+			<div class="col-12 col-lg-12">
+
+
+				<!--nav"s color ctrl-->
+				<div id="startchange"></div>
+
+				<!-- news -->
+				<div class="section" id="section1">
+					<div class="newsWrap">
+						<div class="section-title">
+
+							<h1>購物車</h1>
+
+						</div>
+
+
+
+						<div id="app">
+							<div class="container">
+								<div class="item_header">
+									<div class="item_detail">商品</div>
+									<div class="price">單價</div>
+									<div class="count">數量</div> 
+									<div class="amount">總計</div>
+									<div class="operate">操作</div>
+								</div>
+								<div class="item_container" v-for="(item, index) in itemList" :key="item.id" >
+									<div class="item_header item_body">
+											<div class="item_detail">
+												<img v-bind:src="item.imgUrl" alt="">
+												<div class="name">{{item.itemName}}</div>
+											</div>
+											
+											<div class="price"><span>$</span>{{item.price}}</div>
+											<div class="count">
+												<button @click="handleSub(item)">-</button>
+												{{item.count}}
+												<button @click="handlePlus(item)">+</button>
+											</div> 
+											<div class="amount">{{item.price * item.count}}</div>
+											<div class="operate">
+												<button @click="handledelete(index)">刪除</button>
+											</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+			<!-- go to page-top -->
+			<button onclick="topFunction()" id="go-top_button" title="Go to top"
+				style="width:80px;height:91px;background-image:url('images/assets/go-top_button.png');"></button>
+		</div>
+	</div>
+	</div>
+
+	<!-- Footer -->
+	<div id="page-content">
+		<footer id="sticky-footer" class="py-3  text-white-50" style="background-color: #8E354A;">
+			<div class="container text-center">
+				<small>Copyright &copy; 鐘樓貧民</small>
+			</div>
+		</footer>
+	</div>
+	<!-- vue cart-->
+	<script type="text/javascript">
+		var app = new Vue({
+			el:"#app",
+			data:{
+				itemList:[
+				  {
+					id:"1",
+					nunber:"HA001",
+					itemName:"梅花枝葉刺繡",
+					imgUrl:"https://scontent.frmq2-1.fna.fbcdn.net/v/t1.0-9/52950113_296279321062157_200389464495751168_o.jpg?_nc_cat=110&_nc_ohc=RHFTQe2p-SwAX-gwKeC&_nc_ht=scontent.frmq2-1.fna&oh=ef1d8a4610bc3491d4b01596416ad2c1&oe=5E96CBC7",
+					price:"1280",
+					count:"1"
+				  },
+				  {
+					id:"2",
+					nunber:"HA002",
+					itemName:"染花紋樣",
+					imgUrl:"https://scontent.frmq2-2.fna.fbcdn.net/v/t1.0-9/52588586_296279301062159_1849546362291486720_o.jpg?_nc_cat=101&_nc_ohc=vsWFruoFWXAAX9nWZ4E&_nc_ht=scontent.frmq2-2.fna&oh=9c50af6fe4e2c8a52cee55791e91f950&oe=5E9D25AC",
+					price:"1280",
+					count:"1"
+				  },
+				  {
+					id:"3",
+					nunber:"MA001",
+					itemName:"逆雲花草花紋",
+					imgUrl:"https://scontent.frmq2-2.fna.fbcdn.net/v/t1.0-9/52387499_295220511168038_4729207052474253312_o.jpg?_nc_cat=104&_nc_ohc=mEByvDGFn50AX-Mjcd4&_nc_ht=scontent.frmq2-2.fna&oh=b63efffe714619e1b13de16514e2da68&oe=5EADE29B",
+					price:"1280",
+					count:"1"
+				  },
+				  {
+					id:"4",
+					nunber:"MA002",
+					itemName:"七寶草花紋",
+					imgUrl:"https://scontent.frmq2-2.fna.fbcdn.net/v/t1.0-9/52590259_295220534501369_742359795461259264_o.jpg?_nc_cat=103&_nc_ohc=5rcfr7gAEZoAX8kq_jY&_nc_ht=scontent.frmq2-2.fna&oh=b41d4db498aedde5ff6a40443c186f23&oe=5E9F2C09",
+					price:"1280",
+					count:"1"
+				  },  
+				  {
+					id:"5",
+					nunber:"MA003",
+					itemName:"抽象花紋",
+					imgUrl:"https://scontent.frmq2-1.fna.fbcdn.net/v/t1.0-9/52382629_295220657834690_6195739497007677440_o.jpg?_nc_cat=106&_nc_ohc=EaM5Y8Dh3T8AX8JgFy2&_nc_ht=scontent.frmq2-1.fna&oh=77eef4d22bd74ed473a94b6d82988c2a&oe=5EA4D448",
+					price:"1280",
+					count:"1"
+				  },
+					{
+					id:"6",
+					nunber:"MA004",
+					itemName:"草葉花紋",
+					imgUrl:"https://scontent.frmq2-2.fna.fbcdn.net/v/t1.0-9/52401159_295220631168026_5186579494214828032_o.jpg?_nc_cat=100&_nc_ohc=ppLRqdK7wm4AX__aWp0&_nc_ht=scontent.frmq2-2.fna&oh=035544e84defeffe1fd4a2ff0b43841d&oe=5E938C9B",
+					price:"1280",
+					count:"1"
+				  },
+					{
+					id:"7",
+					nunber:"MA005",
+					itemName:"麻葉花紋",
+					imgUrl:"https://scontent.frmq2-1.fna.fbcdn.net/v/t1.0-9/52967862_296279477728808_5232670068168458240_o.jpg?_nc_cat=106&_nc_ohc=G-cq07OO5lEAX9KBA0s&_nc_ht=scontent.frmq2-1.fna&oh=62b314868a9d4770159b51eb7240f8a8&oe=5EB36C74",
+					price:"1280",
+					count:"1"
+				  },
+					{
+					id:"8",
+					nunber:"MA006",
+					itemName:"糨糊花紋",
+					imgUrl:"https://scontent.frmq2-1.fna.fbcdn.net/v/t1.0-9/52932098_296279394395483_6563185524117340160_o.jpg?_nc_cat=110&_nc_ohc=o39wQ9XAlrsAX85OpjZ&_nc_ht=scontent.frmq2-1.fna&oh=a335575fbc2d343c668512d768282479&oe=5EA941D8",
+					price:"1280",
+					count:"1"
+				  },
+					{
+					id:"9",
+					nunber:"MA007",
+					itemName:"金閣寺花紋",
+					imgUrl:"https://scontent.frmq2-2.fna.fbcdn.net/v/t1.0-9/52608902_295220527834703_6455296516872470528_o.jpg?_nc_cat=103&_nc_ohc=dAV4lJDE58wAX_lFzmD&_nc_ht=scontent.frmq2-2.fna&oh=be467489d3fa5c8bf980572bb08eab4e&oe=5E912C0F",
+					price:"1280",
+					count:"1"
+				  },
+					{
+					id:"10",
+					nunber:"MA008",
+					itemName:"幾何圓點",
+					imgUrl:"https://scontent.frmq2-1.fna.fbcdn.net/v/t1.0-9/52782492_296279534395469_115666888075247616_o.jpg?_nc_cat=102&_nc_ohc=fFdQsRgcfGQAX9r_xmc&_nc_ht=scontent.frmq2-1.fna&oh=6dd1e5017cb3f032342fde6b2a41039e&oe=5E9B90BA",
+					price:"1280",
+					count:"1"
+				  },
+					{
+					id:"11",
+					nunber:"MA009",
+					itemName:"纐纈横段",
+					imgUrl:"https://scontent.frmq2-1.fna.fbcdn.net/v/t1.0-9/52453394_295220614501361_5818927018103799808_o.jpg?_nc_cat=106&_nc_ohc=a9uIKiA-qP0AX98Ha2z&_nc_ht=scontent.frmq2-1.fna&oh=2ce66725c29272b0f59696c198b93bf5&oe=5E8F415E",
+					price:"1280",
+					count:"1"
+				  },
+					{
+					id:"12",
+					nunber:"MA0010",
+					itemName:"萬壽菊花紋",
+					imgUrl:"https://scontent.frmq2-2.fna.fbcdn.net/v/t1.0-9/52609127_295220591168030_4570948412538617856_o.jpg?_nc_cat=107&_nc_ohc=PZXAdEhf8dsAX8KZiBO&_nc_ht=scontent.frmq2-2.fna&oh=ac839d41750b73609789502a60a97c5c&oe=5EA4D527",
+					price:"1280",
+					count:"1"
+				  },
+				  {
+					id:"13",
+					nunber:"MA0011",
+					itemName:"糨糊花紋",
+					imgUrl:"https://scontent.frmq2-1.fna.fbcdn.net/v/t1.0-9/52605827_295220691168020_3850747341199900672_o.jpg?_nc_cat=105&_nc_ohc=FWDWrsq3VHkAX9xon7k&_nc_ht=scontent.frmq2-1.fna&oh=be4a9485df1c27901821bfdde90b8579&oe=5E8F2175",
+					price:"1280",
+					count:"1"
+				  },
+				  {
+					id:"14",
+					nunber:"MA0012",
+					itemName:"編織花紋",
+					imgUrl:"https://scontent.frmq2-1.fna.fbcdn.net/v/t1.0-9/52966840_296279571062132_2652503692418220032_o.jpg?_nc_cat=110&_nc_ohc=872T1ry0Ft4AX9YTK3s&_nc_ht=scontent.frmq2-1.fna&oh=d4bf4076b2f0862144f73df8f1743838&oe=5E90781C",
+					price:"1280",
+					count:"1"
+				  },  
+				  {
+					id:"15",
+					nunber:"MA0013",
+					itemName:"草花紋",
+					imgUrl:"https://scontent.frmq2-2.fna.fbcdn.net/v/t1.0-9/52987297_296279494395473_35580836224958464_o.jpg?_nc_cat=107&_nc_ohc=KS11eqgKmxMAX_I6xfP&_nc_ht=scontent.frmq2-2.fna&oh=026f4dbcc9f5d4b01584fa324a66bd66&oe=5E928DF5",
+					price:"1280",
+					count:"1"
+				  },
+					{
+					id:"16",
+					nunber:"MA0014",
+					itemName:"古典花紋",
+					imgUrl:"https://scontent.frmq2-1.fna.fbcdn.net/v/t1.0-9/53013977_296279454395477_2377892687626895360_o.jpg?_nc_cat=110&_nc_ohc=D45hNbP5dVQAX_MuByy&_nc_ht=scontent.frmq2-1.fna&oh=fab298c25a12708bcbbb1544fe9a73e4&oe=5EAFCB12",
+					price:"1280",
+					count:"1"
+				  },
+					{
+					id:"17",
+					nunber:"MA0015",
+					itemName:"草花花紋",
+					imgUrl:"https://scontent.frmq2-2.fna.fbcdn.net/v/t1.0-9/52602384_296279427728813_6675520471053631488_o.jpg?_nc_cat=100&_nc_ohc=Kfn2NJRP9g4AX8KzBKA&_nc_ht=scontent.frmq2-2.fna&oh=3b63db3738312aa02eb42c7f53d909fa&oe=5E963612",
+					price:"1280",
+					count:"1"
+				  },
+					{
+					id:"18",
+					nunber:"MA0016",
+					itemName:"碎色紙花紋",
+					imgUrl:"https://scontent.frmq2-2.fna.fbcdn.net/v/t1.0-9/52605466_295231691166920_8110199496794701824_o.jpg?_nc_cat=109&_nc_ohc=8lsjJYqGTFIAX-sTyM0&_nc_ht=scontent.frmq2-2.fna&oh=52095dab4bf4cbc6c0691f3f7028deff&oe=5E93F31F",
+					price:"1280",
+					count:"1"
+				  },
+			]
+			},
+			methods:{
+				handlePlus: function(item){
+					item.count++;
+				},
+				handleSub: function(item){
+					if(item.count>1){
+					item.count--;                
+					}
+				},
+				handledelete: function(index){
+					console.log(this);
+					this.itemList.splice(index,1);
+				}
+			},
+			computed:{
+		
+			}
+		})
+	</script>
+	
+	
+	<script>
+		$('#source').quicksand($('#destination li'), {
+			name: value
+		}, function () {
+			// callback code
+		});
+		$("#content").quicksand($("#data > li"), {
+			duration: 1000,
+		}, function () { // callback function
+			$('#content a').tooltip();
+		});
+		$("#content").quicksand($("#data > li"), {
+			duration: 1000,
+			enhancement: function () {
+				Cufon.refresh('#content span');
+			}
+		});
+	</script>
+
+	<!--page-loading js -->
+	<script>
+		$(window).load(function () {
+			$('#loading').hide(0);
+		});
+	</script>
+
+	<!--go to top js-->
+	<script>
+		mybutton = document.getElementById("go-top_button");
+		window.onscroll = function () {
+			scrollFunction()
+		};
+
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+		}
+
+		function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+	</script>
+
+	
+	<!--AOS ani-->
+	<script>
+		AOS.init({
+
+			easing: 'ease-in',
+
+
+
+		});
+	</script>
+
+	<!-- nav js -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+	<script src="assets/js/sina-nav.js"></script>
+
+	<!-- nav scroll js -->
+	<script>
+		$(document).ready(function () {
+			var scroll_start = 0;
+			var startchange = $('#startchange');
+			var offset = startchange.offset();
+			if (startchange.length) {
+				$(document).scroll(function () {
+					scroll_start = $(this).scrollTop();
+					if (scroll_start > offset.top) {
+						$('.sina-nav').css('background-color', '#9E7A7A');
+						$('.sina-nav a').css('color', '#8E354A');
+					} else {
+						$('.sina-nav').css('background-color', '#8E354A');
+						$('.sina-nav a').css('color', '#9E7A7A');
+
+					}
+				});
+			}
+		});
+	</script>
+
+	<!-- For All Plug-in Activation & Others -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			// WOW animation initialize
+			new WOW().init();
+		});
+	</script>
+
+</body>
+
+</html>
